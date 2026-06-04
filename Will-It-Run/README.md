@@ -60,7 +60,7 @@ docker compose ps     # verificá que estén arriba
 
 | Servicio | Puerto(s) | Para qué |
 |---|---|---|
-| MongoDB | 27017 | datos documentales |
+| MongoDB | 27018 (host) -> 27017 (contenedor) | datos documentales |
 | Neo4j | 7474 (web) · 7687 (bolt) | grafo de compatibilidad |
 | Redis | 6379 | caché y rankings |
 
@@ -102,7 +102,7 @@ npm run dev
 Cada motor tiene una GUI oficial gratuita para inspeccionar los datos y probar queries:
 
 - **MongoDB → [Compass](https://www.mongodb.com/products/compass).** Conectá a
-  `mongodb://localhost:27017`, base `willitrun`. Barra de query visual, constructor de pipelines de
+  `mongodb://127.0.0.1:27018/willitrun?directConnection=true`, base `willitrun`. Barra de query visual, constructor de pipelines de
   agregación, análisis de esquema e índices. (Alternativa en VS Code: extensión *MongoDB for VS Code*.)
 - **Neo4j → Neo4j Browser** (ya incluido): [http://localhost:7474](http://localhost:7474), usuario
   `neo4j`, contraseña `willitrun123`. Pegás Cypher y te **dibuja el grafo**.
