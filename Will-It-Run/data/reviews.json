@@ -1,0 +1,25 @@
+[
+  {
+    "tipo": "review",
+    "targetId": "ryzen-5-7600",
+    "targetType": "componente",
+    "autor": "Maximo",
+    "rating": 5,
+    "comentario": "Buen rendimiento para una build AM5 de gama media."
+  },
+  {
+    "tipo": "review",
+    "targetId": "665f00000000000000000001",
+    "targetType": "build",
+    "autor": "Juan",
+    "rating": 4,
+    "comentario": "Build equilibrada para probar compatibilidad y scoring."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "rtx-4070",
+    "targetType": "componente",
+    "autor": "Facundo",
+    "comentario": "Verificar consumo total al combinar con fuentes de menor wattage."
+  }
+]

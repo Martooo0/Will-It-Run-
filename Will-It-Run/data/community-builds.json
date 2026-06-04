@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "665f00000000000000000011",
+    "title": "Build 1440p Valor",
+    "autor": "Equipo Will It Run",
+    "rating": 4.6,
+    "reviews": 2,
+    "note": "Configuracion AM5 balanceada para gaming 1440p.",
+    "build": {
+      "cpu": "ryzen-5-7600",
+      "cooler": "hyper-212-black",
+      "motherboard": "b650-tomahawk",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-4070",
+      "psu": "corsair-rm750e"
+    },
+    "likes": 18,
+    "vistas": 120
+  }
+]

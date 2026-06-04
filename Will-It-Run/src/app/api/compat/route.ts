@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { cacheAside, keys, TTL } from "@/lib/cache";
-import { validarBuild } from "@/lib/queries/cypher";
+import { getAdvertencias, validarBuild } from "@/lib/queries/cypher";
 import { SLOTS } from "@/lib/models/Ensamble";
 
 // Validación de compatibilidad de una build (PDF §6, motor Neo4j | Redis).
@@ -25,9 +25,13 @@ export async function POST(req: Request) {
     }
     const { componentes } = parsed.data;
 
-    const cacheKey = keys.compat(componentes.cpu ?? "_", componentes.motherboard ?? "_");
+    const buildHash = SLOTS.map((slot) => componentes[slot] ?? "_").join(":");
+    const cacheKey = keys.compat(buildHash);
     const resultado = await cacheAside(cacheKey, TTL.COMPAT, () =>
-        validarBuild(componentes),
+        validarBuild(componentes).then(async (validacion) => ({
+            ok: validacion.ok,
+            issues: [...validacion.issues, ...(await getAdvertencias(componentes))],
+        })),
     );
 
     return NextResponse.json(resultado);

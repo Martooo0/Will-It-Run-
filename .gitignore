@@ -1,13 +1,11 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # IDE
-.idea
-.antigravitycli
-.claude
+.idea/
+.antigravitycli/
+.claude/
 
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -16,14 +14,14 @@
 !.yarn/versions
 
 # testing
-/coverage
+coverage/
 
 # next.js
-/.next/
-/out/
+.next/
+out/
 
 # production
-/build
+build/
 
 # misc
 .DS_Store
@@ -35,18 +33,17 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files
 .env*
 !.env.example
 
 # vercel
-.vercel
+.vercel/
 
-# typescript
+# typescript / generated
 *.tsbuildinfo
 next-env.d.ts
 
-# notas locales del equipo (no subir a GitHub)
-resumen-sesion-1.md
-resumen-sesion-2.md
+# local notes
+resumen-sesion-*.md
 patrones_consulta_will_it_run.md

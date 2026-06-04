@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "665f00000000000000000001",
+    "nombreBuild": "AM5 Gaming Equilibrada",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-5-7600",
+      "cooler": "hyper-212-black",
+      "motherboard": "b650-tomahawk",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-4070",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 76,
+    "tier": "A",
+    "powerDraw": 282,
+    "esPublica": true
+  }
+]

@@ -25,10 +25,33 @@ const createSchema = z.object({
     esPublica: z.boolean().default(false),
 });
 
-export async function GET() {
+const getSchema = z.object({
+    all: z.enum(["true", "false"]).transform((v) => v === "true").default(false),
+    perfilUso: z.enum(PERFILES_USO).optional(),
+    gama: z.enum(GAMAS).optional(),
+    limit: z.coerce.number().int().positive().max(200).default(50),
+});
+
+export async function GET(req: Request) {
+    const { searchParams } = new URL(req.url);
+    const parsed = getSchema.safeParse(Object.fromEntries(searchParams));
+    if (!parsed.success) {
+        return NextResponse.json(
+            { error: "Parametros invalidos", detalles: parsed.error.flatten() },
+            { status: 400 },
+        );
+    }
+    const { all, perfilUso, gama, limit } = parsed.data;
+
+    const filtro: Record<string, unknown> = {};
+    if (!all) filtro.esPublica = true;
+    if (perfilUso) filtro.perfilUso = perfilUso;
+    if (gama) filtro.gama = gama;
+
     await connectMongo();
-    const builds = await Ensamble.find({ esPublica: true })
+    const builds = await Ensamble.find(filtro)
         .sort({ fechaCreacion: -1 })
+        .limit(limit)
         .lean();
     return NextResponse.json({ count: builds.length, builds });
 }

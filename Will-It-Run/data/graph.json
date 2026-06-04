@@ -1,0 +1,240 @@
+{
+  "nodes": [
+    { "label": "Socket", "props": { "nombre": "AM5", "generacion": 5 } },
+    { "label": "Chipset", "props": { "nombre": "B650", "gama": "media" } },
+    { "label": "EstandarMemoria", "props": { "tipo": "DDR5" } },
+    { "label": "EstandarBus", "props": { "version": "PCIe 4.0" } },
+    { "label": "EstandarBus", "props": { "version": "NVMe" } },
+    {
+      "label": "Advertencia",
+      "props": {
+        "id": "gpu-consumo-medio",
+        "severidad": "warn",
+        "title": "GPU de consumo medio",
+        "body": "Revisar margen de fuente si se cambia por una PSU menor."
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "ryzen-5-7600",
+        "nombre": "Ryzen 5 7600",
+        "categoria": "cpu"
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "rtx-4070",
+        "nombre": "GeForce RTX 4070",
+        "categoria": "gpu"
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "b650-tomahawk",
+        "nombre": "MAG B650 Tomahawk WiFi",
+        "categoria": "motherboard"
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "corsair-vengeance-32-ddr5",
+        "nombre": "Vengeance 32GB DDR5-6000",
+        "categoria": "memory"
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "samsung-990-pro-1tb",
+        "nombre": "990 PRO 1TB NVMe",
+        "categoria": "storage"
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "hyper-212-black",
+        "nombre": "Hyper 212 Black Edition",
+        "categoria": "cooling"
+      }
+    },
+    {
+      "label": "Componente",
+      "props": {
+        "id": "corsair-rm750e",
+        "nombre": "RM750e",
+        "categoria": "power"
+      }
+    },
+    {
+      "label": "Build",
+      "props": {
+        "id": "665f00000000000000000001",
+        "gama": "media",
+        "perfilUso": "gaming"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "from": { "label": "Componente", "value": "ryzen-5-7600" },
+      "type": "TIENE_SOCKET",
+      "to": { "label": "Socket", "value": "AM5" },
+      "props": { "rol": "requiere", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "TIENE_SOCKET",
+      "to": { "label": "Socket", "value": "AM5" },
+      "props": { "rol": "ofrece", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "hyper-212-black" },
+      "type": "TIENE_SOCKET",
+      "to": { "label": "Socket", "value": "AM5" },
+      "props": { "rol": "soporta", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "TIENE_CHIPSET",
+      "to": { "label": "Chipset", "value": "B650" },
+      "props": { "tipoValidacion": "informativa" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "SOPORTA_MEMORIA",
+      "to": { "label": "EstandarMemoria", "value": "DDR5" },
+      "props": { "rol": "soporta", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "corsair-vengeance-32-ddr5" },
+      "type": "SOPORTA_MEMORIA",
+      "to": { "label": "EstandarMemoria", "value": "DDR5" },
+      "props": { "rol": "usa", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "TIENE_BUS",
+      "to": { "label": "EstandarBus", "value": "PCIe 4.0" },
+      "props": { "rol": "ofrece", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "rtx-4070" },
+      "type": "TIENE_BUS",
+      "to": { "label": "EstandarBus", "value": "PCIe 4.0" },
+      "props": { "rol": "requiere", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "TIENE_BUS",
+      "to": { "label": "EstandarBus", "value": "NVMe" },
+      "props": { "rol": "ofrece", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Componente", "value": "samsung-990-pro-1tb" },
+      "type": "TIENE_BUS",
+      "to": { "label": "EstandarBus", "value": "NVMe" },
+      "props": { "rol": "requiere", "tipoValidacion": "obligatoria" }
+    },
+    {
+      "from": { "label": "Advertencia", "value": "gpu-consumo-medio" },
+      "type": "APLICA_A",
+      "to": { "label": "Componente", "value": "rtx-4070" },
+      "props": {}
+    },
+    {
+      "from": { "label": "Componente", "value": "ryzen-5-7600" },
+      "type": "COMPATIBLE_CON",
+      "to": { "label": "Componente", "value": "b650-tomahawk" },
+      "props": { "motivo": "socket AM5" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "COMPATIBLE_CON",
+      "to": { "label": "Componente", "value": "corsair-vengeance-32-ddr5" },
+      "props": { "motivo": "DDR5" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "COMPATIBLE_CON",
+      "to": { "label": "Componente", "value": "rtx-4070" },
+      "props": { "motivo": "PCIe 4.0" }
+    },
+    {
+      "from": { "label": "Componente", "value": "b650-tomahawk" },
+      "type": "COMPATIBLE_CON",
+      "to": { "label": "Componente", "value": "samsung-990-pro-1tb" },
+      "props": { "motivo": "NVMe" }
+    },
+    {
+      "from": { "label": "Componente", "value": "ryzen-5-7600" },
+      "type": "COMPATIBLE_CON",
+      "to": { "label": "Componente", "value": "hyper-212-black" },
+      "props": { "motivo": "soporte AM5" }
+    },
+    {
+      "from": { "label": "Componente", "value": "rtx-4070" },
+      "type": "COMPATIBLE_CON",
+      "to": { "label": "Componente", "value": "corsair-rm750e" },
+      "props": { "motivo": "margen de potencia" }
+    },
+    {
+      "from": { "label": "Componente", "value": "ryzen-5-7600" },
+      "type": "COMBINA_FRECUENTEMENTE_CON",
+      "to": { "label": "Componente", "value": "rtx-4070" },
+      "props": { "perfilUso": "gaming", "frecuencia": 18, "ratingPromedio": 4.7 }
+    },
+    {
+      "from": { "label": "Componente", "value": "ryzen-5-7600" },
+      "type": "COMBINA_FRECUENTEMENTE_CON",
+      "to": { "label": "Componente", "value": "b650-tomahawk" },
+      "props": { "perfilUso": "gaming", "frecuencia": 14, "ratingPromedio": 4.6 }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "ryzen-5-7600" },
+      "props": { "slot": "cpu" }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "hyper-212-black" },
+      "props": { "slot": "cooler" }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "b650-tomahawk" },
+      "props": { "slot": "motherboard" }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "corsair-vengeance-32-ddr5" },
+      "props": { "slot": "memory" }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "samsung-990-pro-1tb" },
+      "props": { "slot": "storage" }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "rtx-4070" },
+      "props": { "slot": "gpu" }
+    },
+    {
+      "from": { "label": "Build", "value": "665f00000000000000000001" },
+      "type": "TIENE",
+      "to": { "label": "Componente", "value": "corsair-rm750e" },
+      "props": { "slot": "psu" }
+    }
+  ]
+}

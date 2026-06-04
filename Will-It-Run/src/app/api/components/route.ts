@@ -17,6 +17,16 @@ const querySchema = z.object({
     limit: z.coerce.number().int().positive().max(200).default(50),
 });
 
+const createSchema = z.object({
+    id: z.string().min(1),
+    name: z.string().min(1),
+    brand: z.string().optional(),
+    cat: z.enum(CATEGORIAS),
+    badge: z.string().optional(),
+    descripcion: z.string().optional(),
+    specs: z.record(z.string(), z.unknown()).default({}),
+});
+
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url);
     const parsed = querySchema.safeParse(Object.fromEntries(searchParams));
@@ -43,4 +53,33 @@ export async function GET(req: Request) {
 
     const componentes = await cursor.lean();
     return NextResponse.json({ count: componentes.length, componentes });
+}
+
+export async function POST(req: Request) {
+    const body = await req.json().catch(() => null);
+    const parsed = createSchema.safeParse(body);
+    if (!parsed.success) {
+        return NextResponse.json(
+            { error: "Body invalido", detalles: parsed.error.flatten() },
+            { status: 400 },
+        );
+    }
+
+    try {
+        await connectMongo();
+        const componente = await Component.create(parsed.data);
+        return NextResponse.json(componente, { status: 201 });
+    } catch (e) {
+        if (typeof e === "object" && e !== null && "code" in e && e.code === 11000) {
+            return NextResponse.json(
+                { error: "Ya existe un componente con ese id" },
+                { status: 409 },
+            );
+        }
+        console.error("Error creando componente:", e);
+        return NextResponse.json(
+            { error: "No se pudo crear el componente" },
+            { status: 500 },
+        );
+    }
 }

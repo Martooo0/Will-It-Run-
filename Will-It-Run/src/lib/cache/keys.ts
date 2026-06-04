@@ -11,8 +11,8 @@ export const TTL = {
 
 // Builders de claves. Usar siempre estos en lugar de strings sueltos.
 export const keys = {
-    // string (JSON con result, issues, timestamp)
-    compat: (cpuId: string, moboId: string) => `compat:${cpuId}:${moboId}`,
+    // string (JSON con ok/issues de una build completa)
+    compat: (buildHash: string) => `compat:${buildHash}`,
     // hash (cpuScore, gpuScore, ramSpeed, totalScore, tier)
     buildscore: (buildId: string) => `buildscore:${buildId}`,
     // string (JSON con array de ids de advertencias activas)
