@@ -1,8 +1,6 @@
 # Will It Run?
 
-Repositorio del proyecto **Will It Run?**.
-
-El codigo de la aplicacion esta dentro de:
+El código está en:
 
 ```text
 Will-It-Run/
