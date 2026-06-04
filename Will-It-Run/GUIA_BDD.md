@@ -88,7 +88,7 @@ Community:
 ## 6. Archivos de datos
 
 - `data/components.json`: componentes base para Mongo.
-- `data/ensambles.json`: builds base para Mongo.
+- `data/builds.json`: builds base para Mongo.
 - `data/community-builds.json`: builds comunitarias base.
 - `data/reviews.json`: reviews/reportes base.
 - `data/graph.json`: nodos y relaciones para Neo4j.
@@ -120,4 +120,3 @@ const parsed = schema.safeParse(body);
 
 Significa: "chequea que el body tenga la forma esperada". Si falla, se devuelve
 HTTP 400. Si pasa, `parsed.data` ya esta validado.
-

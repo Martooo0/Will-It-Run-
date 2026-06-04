@@ -16,7 +16,7 @@ const DATA_DIR = path.join(process.cwd(), "data");
 // modelo Mongoose <- archivo JSON en data/
 const COLECCIONES = [
     { model: Component, file: "components.json", label: "componentes" },
-    { model: Ensamble, file: "ensambles.json", label: "ensambles" },
+    { model: Ensamble, file: "builds.json", label: "ensambles" },
     { model: CommunityBuild, file: "community-builds.json", label: "community builds" },
     { model: Review, file: "reviews.json", label: "reviews" },
 ] as const;
