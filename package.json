@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seed:mongo": "tsx --env-file=.env.local scripts/seed-mongo.ts"
+    "seed:mongo": "tsx --env-file=.env.local scripts/seed-mongo.ts",
+    "seed:neo4j": "tsx --env-file=.env.local scripts/seed-neo4j.ts",
+    "seed:all": "npm run seed:mongo && npm run seed:neo4j"
   },
   "dependencies": {
     "ioredis": "^5.10.1",
@@ -15,7 +17,8 @@
     "neo4j-driver": "^6.0.1",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

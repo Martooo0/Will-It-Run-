@@ -1,58 +1,53 @@
 [
-    {
-      "id": "ryzen-7-5700g",
-      "name": "Ryzen 7 5700G",
-      "brand": "AMD",
-      "cat": "cpu",
-      "specs": { "scoreCPU": 62, "tdp": 65, "power": 65, "socket": "AM4", "cores": 8, "idle": 35 }
-    },
-    {
-      "id": "b550m-ds3h",
-      "name": "B550M DS3H",
-      "brand": "Gigabyte",
-      "cat": "motherboard",
-      "specs": { "socket": "AM4", "form": "mATX", "memType": "DDR4", "memFreqMax": 4733, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 3, "pciType": "4.0", "power": 40 }
-    },
-    {
-      "id": "corsair-vengeance-16gb",
-      "name": "Vengeance LPX 16GB (2x8GB)",
-      "brand": "Corsair",
-      "cat": "memory",
-      "specs": { "type": "DDR4", "size": 16, "speed": 3200, "power": 6 }
-    },
-    {
-      "id": "rtx-3060",
-      "name": "GeForce RTX 3060",
-      "brand": "NVIDIA",
-      "cat": "gpu",
-      "specs": { "scoreGPU": 85, "vram": 12, "power": 170, "length": 242, "vramBus": 192 }
-    },
-    {
-      "id": "corsair-cx650m",
-      "name": "CX650M",
-      "brand": "Corsair",
-      "cat": "power",
-      "specs": { "watts": 650, "efficiency": "80+ Bronze", "modular": true, "power": 0 }
-    },
-    {
-      "id": "hyper-212-rgb",
-      "name": "Hyper 212 RGB Black Edition",
-      "brand": "Cooler Master",
-      "cat": "cooling",
-      "specs": { "tdpCapacity": 150, "height": 158.8, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1200"], "power": 3 }
-    },
-    {
-      "id": "nzxt-h510",
-      "name": "H510",
-      "brand": "NZXT",
-      "cat": "case",
-      "specs": { "form": ["ATX", "mATX", "ITX"], "gpuMax": 381, "coolerMax": 165, "radMax": 280, "power": 5 }
-    },
-    {
-      "id": "kingston-nv2-1tb",
-      "name": "NV2 1TB NVMe M.2",
-      "brand": "Kingston",
-      "cat": "storage",
-      "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 3500, "power": 5 }
-    }
+  {
+    "id": "ryzen-5-7600",
+    "name": "Ryzen 5 7600",
+    "brand": "AMD",
+    "cat": "cpu",
+    "badge": "Mejor valor",
+    "descripcion": "CPU de 6 núcleos para gaming 1080p/1440p en plataforma AM5.",
+    "specs": { "scoreCPU": 72, "socket": "AM5", "cores": 6, "threads": 12, "idle": 35, "powerCPU": 65 }
+  },
+  {
+    "id": "rtx-4070",
+    "name": "GeForce RTX 4070",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 80, "vram": 12, "powerGPU": 200, "length": 244, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "b650-tomahawk",
+    "name": "MAG B650 Tomahawk WiFi",
+    "brand": "MSI",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 6400, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "corsair-vengeance-32-ddr5",
+    "name": "Vengeance 32GB (2x16GB) DDR5-6000",
+    "brand": "Corsair",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 32, "speed": 6000, "powerRam": 8 }
+  },
+  {
+    "id": "samsung-990-pro-1tb",
+    "name": "990 PRO 1TB NVMe",
+    "brand": "Samsung",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 7450, "powerStg": 6 }
+  },
+  {
+    "id": "hyper-212-black",
+    "name": "Hyper 212 Black Edition",
+    "brand": "Cooler Master",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 150, "height": 159, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1200"], "powerCooler": 3 }
+  },
+  {
+    "id": "corsair-rm750e",
+    "name": "RM750e",
+    "brand": "Corsair",
+    "cat": "power",
+    "specs": { "watts": 750, "efficiency": "80+ Gold", "modular": true }
+  }
 ]
