@@ -1,12 +1,10 @@
-// Demo MongoDB pura - Will It Run
-// Ejecutar en la base: willitrun
+// Consultas MongoDB puras - Will It Run
+// Ejecutar desde la carpeta Will-It-Run:
 //
-// Opcion 1:
-//   docker exec -it wir-mongo mongosh willitrun
-//   Luego copiar y pegar bloques.
+//   Get-Content consultas\mongo-consultas.mongodb.js | docker exec -i wir-mongo mongosh willitrun
 //
-// Opcion 2:
-//   docker exec -i wir-mongo mongosh willitrun < consultas/mongo-demo.mongodb.js
+// Este archivo es solo para READ y aggregations. No crea, modifica ni borra
+// datos. Para cargas usar consultas/mongo-carga.mongodb.js.
 
 // READ: traer todos los componentes.
 db.components.find();
@@ -17,11 +15,15 @@ db.components.find({ cat: "gpu" });
 
 // READ: componentes por marca.
 db.components.find({ brand: "AMD" });
+db.components.find({ brand: "DemoBrand" });
 
 // READ: busqueda por texto.
 db.components.find({
   name: { $regex: "ryzen", $options: "i" },
 });
+
+// READ: buscar un componente por id.
+db.components.findOne({ id: "demo-gpu-clase" });
 
 // READ: consultas sobre specs.
 db.components.find({
@@ -32,6 +34,11 @@ db.components.find({
 db.components.find({
   cat: "power",
   "specs.watts": { $gte: 700 },
+});
+
+db.components.find({
+  cat: "motherboard",
+  "specs.memType": "DDR5",
 });
 
 db.components.find({
@@ -48,60 +55,6 @@ db.components.find(
   { cat: "cpu" },
   { _id: 0, id: 1, name: 1, brand: 1, "specs.scoreCPU": 1 },
 );
-
-// CREATE: insertar un componente demo.
-db.components.insertOne({
-  id: "demo-gpu-clase",
-  name: "GPU Demo Clase",
-  brand: "DemoBrand",
-  cat: "gpu",
-  badge: "Demo",
-  descripcion: "Componente creado para practicar CRUD en MongoDB.",
-  specs: {
-    scoreGPU: 65,
-    vram: 8,
-    powerGPU: 180,
-    length: 240,
-    busType: "PCIe 4.0",
-  },
-});
-
-// READ: verificar insert.
-db.components.findOne({ id: "demo-gpu-clase" });
-
-// UPDATE: actualizar campos simples.
-db.components.updateOne(
-  { id: "demo-gpu-clase" },
-  {
-    $set: {
-      badge: "Actualizado",
-      descripcion: "Componente actualizado desde una query Mongo pura.",
-    },
-  },
-);
-
-// UPDATE: actualizar campos anidados dentro de specs.
-db.components.updateOne(
-  { id: "demo-gpu-clase" },
-  {
-    $set: {
-      "specs.scoreGPU": 72,
-      "specs.vram": 12,
-    },
-  },
-);
-
-// READ: verificar update.
-db.components.findOne(
-  { id: "demo-gpu-clase" },
-  { _id: 0, id: 1, name: 1, badge: 1, descripcion: 1, specs: 1 },
-);
-
-// DELETE: borrar solo el componente demo.
-db.components.deleteOne({ id: "demo-gpu-clase" });
-
-// READ: verificar delete. Si devuelve null, se borro.
-db.components.findOne({ id: "demo-gpu-clase" });
 
 // BUILDS: consultas sobre ensambles.
 db.ensambles.find({ esPublica: true });
@@ -141,6 +94,20 @@ db.components.aggregate([
     $group: {
       _id: "$cat",
       promedioScoreCPU: { $avg: "$specs.scoreCPU" },
+      cantidad: { $sum: 1 },
+    },
+  },
+]);
+
+// AGGREGATE: promedio de score GPU.
+db.components.aggregate([
+  {
+    $match: { cat: "gpu" },
+  },
+  {
+    $group: {
+      _id: "$cat",
+      promedioScoreGPU: { $avg: "$specs.scoreGPU" },
       cantidad: { $sum: 1 },
     },
   },

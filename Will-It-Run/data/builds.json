@@ -17,5 +17,746 @@
     "tier": "A",
     "powerDraw": 282,
     "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000002",
+    "nombreBuild": "AM5 1080p Eficiente",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-5-7600",
+      "cooler": "deepcool-ak400",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "kingston-nv3-1tb",
+      "gpu": "rtx-4060",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 65,
+    "tier": "B",
+    "powerDraw": 196,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000003",
+    "nombreBuild": "Ryzen 1440p Popular",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-7-7800x3d",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-b650-aorus-elite-ax",
+      "memory": "gskill-flare-x5-32-ddr5-6000",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rtx-4070-super",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 88,
+    "tier": "A",
+    "powerDraw": 359,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000004",
+    "nombreBuild": "AM5 1440p AMD",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-7-7700",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "asus-tuf-b650-plus-wifi",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "crucial-t500-1tb",
+      "gpu": "rx-7800-xt",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "buildScore": 82,
+    "tier": "A",
+    "powerDraw": 347,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000005",
+    "nombreBuild": "Intel 1080p Accesible",
+    "perfilUso": "gaming",
+    "gama": "baja",
+    "componentes": {
+      "cpu": "core-i5-12400f",
+      "cooler": "hyper-212-black",
+      "motherboard": "asus-prime-b760-plus-d4",
+      "memory": "corsair-vengeance-lpx-16-ddr4-3200",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rtx-3060-12gb",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 52,
+    "tier": "C",
+    "powerDraw": 249,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000006",
+    "nombreBuild": "Upgrade AM4 Gaming",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-7-5700x3d",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "msi-b550-tomahawk",
+      "memory": "gskill-ripjaws-v-32-ddr4-3600",
+      "storage": "wd-blue-sn580-1tb",
+      "gpu": "rx-7700-xt",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 71,
+    "tier": "B",
+    "powerDraw": 367,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000007",
+    "nombreBuild": "Intel DDR5 Streaming",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-i5-14600k",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "gigabyte-z790-aorus-elite-ax",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-4070-super",
+      "psu": "corsair-rm850e"
+    },
+    "buildScore": 83,
+    "tier": "A",
+    "powerDraw": 364,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000008",
+    "nombreBuild": "Creative Pro AM5",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9950x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asus-tuf-x870-plus-wifi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-4080-super",
+      "psu": "corsair-rm1000e"
+    },
+    "buildScore": 97,
+    "tier": "S",
+    "powerDraw": 519,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000009",
+    "nombreBuild": "Arquitectura Alta Gama",
+    "perfilUso": "architecture",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-i7-14700k",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "msi-mag-z790-tomahawk-wifi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-4070-ti-super",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "buildScore": 93,
+    "tier": "S",
+    "powerDraw": 441,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000010",
+    "nombreBuild": "4K Entusiasta",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-7-9800x3d",
+      "cooler": "nzxt-kraken-360",
+      "motherboard": "asrock-x870e-taichi",
+      "memory": "gskill-trident-z5-32-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5080",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "buildScore": 97,
+    "tier": "S",
+    "powerDraw": 507,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000011",
+    "nombreBuild": "AMD 4K Valor",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9900x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "gigabyte-b850-aorus-elite-wifi7",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "kingston-kc3000-2tb",
+      "gpu": "rx-7900-xtx",
+      "psu": "corsair-rm1000e"
+    },
+    "buildScore": 95,
+    "tier": "S",
+    "powerDraw": 504,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000012",
+    "nombreBuild": "RTX 5070 Balanceada",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-5-9600x",
+      "cooler": "deepcool-ak400",
+      "motherboard": "msi-b850-gaming-plus-wifi",
+      "memory": "teamgroup-tforce-delta-32-ddr5-6000",
+      "storage": "crucial-t500-1tb",
+      "gpu": "rtx-5070",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "buildScore": 84,
+    "tier": "A",
+    "powerDraw": 333,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000013",
+    "nombreBuild": "RX 9070 XT Gaming",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-7-9700x",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "asus-tuf-b650-plus-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rx-9070-xt",
+      "psu": "corsair-rm850e"
+    },
+    "buildScore": 90,
+    "tier": "S",
+    "powerDraw": 388,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000014",
+    "nombreBuild": "Intel Core Ultra Nueva Plataforma",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-ultra-7-265k",
+      "cooler": "corsair-h100i-elite-240",
+      "motherboard": "msi-pro-z890-a-wifi",
+      "memory": "gskill-trident-z5-32-ddr5-6400",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-5070-ti",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "buildScore": 92,
+    "tier": "S",
+    "powerDraw": 449,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000015",
+    "nombreBuild": "Entrada Actual con RTX 5060",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-5-7600",
+      "cooler": "deepcool-ak400",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "crucial-pro-32-ddr5-5600",
+      "storage": "kingston-nv3-1tb",
+      "gpu": "rtx-5060",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 68,
+    "tier": "B",
+    "powerDraw": 226,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000016",
+    "nombreBuild": "1080p AMD Economica",
+    "perfilUso": "gaming",
+    "gama": "baja",
+    "componentes": {
+      "cpu": "ryzen-5-5600",
+      "cooler": "hyper-212-black",
+      "motherboard": "asus-tuf-b550-plus",
+      "memory": "kingston-fury-beast-32-ddr4-3200",
+      "storage": "crucial-mx500-1tb",
+      "gpu": "rx-7600",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 56,
+    "tier": "C",
+    "powerDraw": 244,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000017",
+    "nombreBuild": "1440p AMD Popular",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-5-9600x",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-b650-aorus-elite-ax",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rx-7900-gre",
+      "psu": "corsair-rm850e"
+    },
+    "buildScore": 84,
+    "tier": "A",
+    "powerDraw": 344,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000018",
+    "nombreBuild": "Workstation Mixta",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-i9-14900k",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "gigabyte-z790-aorus-elite-ax",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-4080-super",
+      "psu": "corsair-rm1000e"
+    },
+    "buildScore": 97,
+    "tier": "S",
+    "powerDraw": 474,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000019",
+    "nombreBuild": "PC Compacta mATX AM5",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-7-7700",
+      "cooler": "deepcool-ak400",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "wd-blue-sn580-1tb",
+      "gpu": "rtx-4060-ti-16gb",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "buildScore": 74,
+    "tier": "B",
+    "powerDraw": 245,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000020",
+    "nombreBuild": "Intel 1440p DDR4",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "core-i5-14400f",
+      "cooler": "hyper-212-black",
+      "motherboard": "msi-pro-b760-p-wifi-ddr4",
+      "memory": "corsair-vengeance-lpx-32-ddr4-3600",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rtx-4060-ti-8gb",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 65,
+    "tier": "B",
+    "powerDraw": 241,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000021",
+    "nombreBuild": "Core Ultra 5 Gaming",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "core-ultra-5-245k",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-b860-aorus-elite-wifi7",
+      "memory": "crucial-pro-32-ddr5-5600",
+      "storage": "kingston-nv3-1tb",
+      "gpu": "arc-b580",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 70,
+    "tier": "B",
+    "powerDraw": 333,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000022",
+    "nombreBuild": "Render Extremo RTX 5090",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9950x3d",
+      "cooler": "nzxt-kraken-360",
+      "motherboard": "asrock-x870e-taichi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5090",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "buildScore": 100,
+    "tier": "S",
+    "powerDraw": 776,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000023",
+    "nombreBuild": "RX 9060 XT 1080p Plus",
+    "perfilUso": "gaming",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-5-7600x",
+      "cooler": "deepcool-ak400",
+      "motherboard": "msi-b850-gaming-plus-wifi",
+      "memory": "teamgroup-tforce-delta-32-ddr5-6000",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rx-9060-xt-16gb",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "buildScore": 72,
+    "tier": "B",
+    "powerDraw": 282,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000024",
+    "nombreBuild": "AM4 Economica Mejorada",
+    "perfilUso": "gaming",
+    "gama": "baja",
+    "componentes": {
+      "cpu": "ryzen-5-5600",
+      "cooler": "hyper-212-black",
+      "motherboard": "gigabyte-b550-aorus-elite-v2",
+      "memory": "corsair-vengeance-lpx-16-ddr4-3200",
+      "storage": "crucial-mx500-1tb",
+      "gpu": "rtx-4060",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 57,
+    "tier": "C",
+    "powerDraw": 192,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000025",
+    "nombreBuild": "Gaming Premium 1440p",
+    "perfilUso": "gaming",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-7-9800x3d",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asus-tuf-x870-plus-wifi",
+      "memory": "gskill-trident-z5-32-ddr5-6400",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-5070-ti",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "buildScore": 95,
+    "tier": "S",
+    "powerDraw": 447,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000026",
+    "nombreBuild": "Edicion 4K AM5",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9900x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "gigabyte-b850-aorus-elite-wifi7",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-4070-ti-super",
+      "psu": "corsair-rm850e"
+    },
+    "buildScore": 92,
+    "tier": "S",
+    "powerDraw": 431,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000027",
+    "nombreBuild": "Diseno Grafico Pro",
+    "perfilUso": "creative",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-7-9700x",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "asus-tuf-b650-plus-wifi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "crucial-t500-1tb",
+      "gpu": "rtx-4070-super",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 86,
+    "tier": "A",
+    "powerDraw": 319,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000028",
+    "nombreBuild": "Arquitectura Revit Media",
+    "perfilUso": "architecture",
+    "gama": "media",
+    "componentes": {
+      "cpu": "core-i5-14600k",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-z790-aorus-elite-ax",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-4070",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 80,
+    "tier": "A",
+    "powerDraw": 336,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000029",
+    "nombreBuild": "Arquitectura BIM AM5",
+    "perfilUso": "architecture",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9900x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asus-tuf-x870-plus-wifi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-4080-super",
+      "psu": "corsair-rm1000e"
+    },
+    "buildScore": 96,
+    "tier": "S",
+    "powerDraw": 510,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000030",
+    "nombreBuild": "Render Arquitectura AMD",
+    "perfilUso": "architecture",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9950x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asrock-x870e-taichi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "kingston-kc3000-2tb",
+      "gpu": "rx-7900-xtx",
+      "psu": "corsair-rm1000e"
+    },
+    "buildScore": 96,
+    "tier": "S",
+    "powerDraw": 544,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000031",
+    "nombreBuild": "Produccion Audiovisual Intel",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-i7-14700k",
+      "cooler": "corsair-h100i-elite-240",
+      "motherboard": "msi-mag-z790-tomahawk-wifi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-4070-ti-super",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "buildScore": 92,
+    "tier": "S",
+    "powerDraw": 439,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000032",
+    "nombreBuild": "Modelado 3D Intel Ultra",
+    "perfilUso": "architecture",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-ultra-9-285k",
+      "cooler": "nzxt-kraken-360",
+      "motherboard": "asus-tuf-z890-plus-wifi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5080",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "buildScore": 98,
+    "tier": "S",
+    "powerDraw": 543,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000033",
+    "nombreBuild": "Fotografia y Video Media",
+    "perfilUso": "creative",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-7-7700",
+      "cooler": "deepcool-ak400",
+      "motherboard": "gigabyte-b650-aorus-elite-ax",
+      "memory": "gskill-flare-x5-32-ddr5-6000",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rtx-4060-ti-16gb",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 78,
+    "tier": "A",
+    "powerDraw": 246,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000034",
+    "nombreBuild": "Arquitectura 1440p Economica",
+    "perfilUso": "architecture",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-5-9600x",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "msi-b850-gaming-plus-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "crucial-t500-1tb",
+      "gpu": "rx-7800-xt",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 82,
+    "tier": "A",
+    "powerDraw": 342,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000035",
+    "nombreBuild": "Creator Compacta AM5",
+    "perfilUso": "creative",
+    "gama": "media",
+    "componentes": {
+      "cpu": "ryzen-7-9700x",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-4070",
+      "psu": "corsair-rm750e"
+    },
+    "buildScore": 83,
+    "tier": "A",
+    "powerDraw": 307,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000036",
+    "nombreBuild": "Lumion y Twinmotion",
+    "perfilUso": "architecture",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-7-9800x3d",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asus-tuf-x870-plus-wifi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-5070-ti",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "buildScore": 95,
+    "tier": "S",
+    "powerDraw": 447,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000037",
+    "nombreBuild": "SketchUp y Render Medio",
+    "perfilUso": "architecture",
+    "gama": "media",
+    "componentes": {
+      "cpu": "core-i5-14400f",
+      "cooler": "hyper-212-black",
+      "motherboard": "msi-pro-b760-p-wifi-ddr4",
+      "memory": "gskill-ripjaws-v-32-ddr4-3600",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rtx-4060-ti-16gb",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "buildScore": 72,
+    "tier": "B",
+    "powerDraw": 246,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000038",
+    "nombreBuild": "Edicion Full NVIDIA",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-ultra-7-265k",
+      "cooler": "corsair-h100i-elite-240",
+      "motherboard": "msi-pro-z890-a-wifi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5080",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "buildScore": 96,
+    "tier": "S",
+    "powerDraw": 523,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000039",
+    "nombreBuild": "Arquitectura Extrema RTX 5090",
+    "perfilUso": "architecture",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "core-ultra-9-285k",
+      "cooler": "nzxt-kraken-360",
+      "motherboard": "asus-tuf-z890-plus-wifi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5090",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "buildScore": 100,
+    "tier": "S",
+    "powerDraw": 738,
+    "esPublica": true
+  },
+  {
+    "_id": "665f00000000000000000040",
+    "nombreBuild": "Creator AMD Radeon",
+    "perfilUso": "creative",
+    "gama": "alta",
+    "componentes": {
+      "cpu": "ryzen-9-9950x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "gigabyte-b850-aorus-elite-wifi7",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "kingston-kc3000-2tb",
+      "gpu": "rx-9070-xt",
+      "psu": "corsair-rm850e"
+    },
+    "buildScore": 94,
+    "tier": "S",
+    "powerDraw": 494,
+    "esPublica": true
   }
 ]

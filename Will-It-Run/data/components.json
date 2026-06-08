@@ -4,9 +4,175 @@
     "name": "Ryzen 5 7600",
     "brand": "AMD",
     "cat": "cpu",
-    "badge": "Mejor valor",
-    "descripcion": "CPU de 6 núcleos para gaming 1080p/1440p en plataforma AM5.",
     "specs": { "scoreCPU": 72, "socket": "AM5", "cores": 6, "threads": 12, "idle": 35, "powerCPU": 65 }
+  },
+  {
+    "id": "ryzen-5-7600x",
+    "name": "Ryzen 5 7600X",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 75, "socket": "AM5", "cores": 6, "threads": 12, "idle": 38, "powerCPU": 105 }
+  },
+  {
+    "id": "ryzen-7-7700",
+    "name": "Ryzen 7 7700",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 80, "socket": "AM5", "cores": 8, "threads": 16, "idle": 36, "powerCPU": 65 }
+  },
+  {
+    "id": "ryzen-7-7800x3d",
+    "name": "Ryzen 7 7800X3D",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 90, "socket": "AM5", "cores": 8, "threads": 16, "idle": 42, "powerCPU": 120 }
+  },
+  {
+    "id": "ryzen-5-9600x",
+    "name": "Ryzen 5 9600X",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 80, "socket": "AM5", "cores": 6, "threads": 12, "idle": 36, "powerCPU": 65 }
+  },
+  {
+    "id": "ryzen-7-9700x",
+    "name": "Ryzen 7 9700X",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 86, "socket": "AM5", "cores": 8, "threads": 16, "idle": 38, "powerCPU": 65 }
+  },
+  {
+    "id": "ryzen-7-9800x3d",
+    "name": "Ryzen 7 9800X3D",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 96, "socket": "AM5", "cores": 8, "threads": 16, "idle": 44, "powerCPU": 120 }
+  },
+  {
+    "id": "ryzen-9-9900x",
+    "name": "Ryzen 9 9900X",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 92, "socket": "AM5", "cores": 12, "threads": 24, "idle": 46, "powerCPU": 120 }
+  },
+  {
+    "id": "ryzen-9-9950x",
+    "name": "Ryzen 9 9950X",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 98, "socket": "AM5", "cores": 16, "threads": 32, "idle": 52, "powerCPU": 170 }
+  },
+  {
+    "id": "ryzen-9-9950x3d",
+    "name": "Ryzen 9 9950X3D",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 100, "socket": "AM5", "cores": 16, "threads": 32, "idle": 54, "powerCPU": 170 }
+  },
+  {
+    "id": "ryzen-5-5600",
+    "name": "Ryzen 5 5600",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 55, "socket": "AM4", "cores": 6, "threads": 12, "idle": 28, "powerCPU": 65 }
+  },
+  {
+    "id": "ryzen-7-5700x3d",
+    "name": "Ryzen 7 5700X3D",
+    "brand": "AMD",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 70, "socket": "AM4", "cores": 8, "threads": 16, "idle": 38, "powerCPU": 105 }
+  },
+  {
+    "id": "core-i5-12400f",
+    "name": "Core i5-12400F",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 54, "socket": "LGA1700", "cores": 6, "threads": 12, "idle": 30, "powerCPU": 65 }
+  },
+  {
+    "id": "core-i5-13400f",
+    "name": "Core i5-13400F",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 62, "socket": "LGA1700", "cores": 10, "threads": 16, "idle": 32, "powerCPU": 65 }
+  },
+  {
+    "id": "core-i5-14400f",
+    "name": "Core i5-14400F",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 64, "socket": "LGA1700", "cores": 10, "threads": 16, "idle": 32, "powerCPU": 65 }
+  },
+  {
+    "id": "core-i5-14600k",
+    "name": "Core i5-14600K",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 80, "socket": "LGA1700", "cores": 14, "threads": 20, "idle": 44, "powerCPU": 125 }
+  },
+  {
+    "id": "core-i7-14700k",
+    "name": "Core i7-14700K",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 94, "socket": "LGA1700", "cores": 20, "threads": 28, "idle": 52, "powerCPU": 125 }
+  },
+  {
+    "id": "core-i9-14900k",
+    "name": "Core i9-14900K",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 98, "socket": "LGA1700", "cores": 24, "threads": 32, "idle": 58, "powerCPU": 125 }
+  },
+  {
+    "id": "core-ultra-5-245k",
+    "name": "Core Ultra 5 245K",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 78, "socket": "LGA1851", "cores": 14, "threads": 14, "idle": 36, "powerCPU": 125 }
+  },
+  {
+    "id": "core-ultra-7-265k",
+    "name": "Core Ultra 7 265K",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 90, "socket": "LGA1851", "cores": 20, "threads": 20, "idle": 42, "powerCPU": 125 }
+  },
+  {
+    "id": "core-ultra-9-285k",
+    "name": "Core Ultra 9 285K",
+    "brand": "Intel",
+    "cat": "cpu",
+    "specs": { "scoreCPU": 97, "socket": "LGA1851", "cores": 24, "threads": 24, "idle": 48, "powerCPU": 125 }
+  },
+  {
+    "id": "rtx-3060-12gb",
+    "name": "GeForce RTX 3060 12GB",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 50, "vram": 12, "powerGPU": 170, "length": 242, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-4060",
+    "name": "GeForce RTX 4060",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 58, "vram": 8, "powerGPU": 115, "length": 240, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-4060-ti-8gb",
+    "name": "GeForce RTX 4060 Ti 8GB",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 66, "vram": 8, "powerGPU": 160, "length": 244, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-4060-ti-16gb",
+    "name": "GeForce RTX 4060 Ti 16GB",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 68, "vram": 16, "powerGPU": 165, "length": 244, "busType": "PCIe 4.0" }
   },
   {
     "id": "rtx-4070",
@@ -16,11 +182,270 @@
     "specs": { "scoreGPU": 80, "vram": 12, "powerGPU": 200, "length": 244, "busType": "PCIe 4.0" }
   },
   {
+    "id": "rtx-4070-super",
+    "name": "GeForce RTX 4070 SUPER",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 86, "vram": 12, "powerGPU": 220, "length": 244, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-4070-ti-super",
+    "name": "GeForce RTX 4070 Ti SUPER",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 92, "vram": 16, "powerGPU": 285, "length": 305, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-4080-super",
+    "name": "GeForce RTX 4080 SUPER",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 96, "vram": 16, "powerGPU": 320, "length": 310, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-4090",
+    "name": "GeForce RTX 4090",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 100, "vram": 24, "powerGPU": 450, "length": 336, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rtx-5060",
+    "name": "GeForce RTX 5060",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 64, "vram": 8, "powerGPU": 145, "length": 240, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rtx-5060-ti-16gb",
+    "name": "GeForce RTX 5060 Ti 16GB",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 72, "vram": 16, "powerGPU": 180, "length": 245, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rtx-5070",
+    "name": "GeForce RTX 5070",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 88, "vram": 12, "powerGPU": 250, "length": 260, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rtx-5070-ti",
+    "name": "GeForce RTX 5070 Ti",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 94, "vram": 16, "powerGPU": 300, "length": 305, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rtx-5080",
+    "name": "GeForce RTX 5080",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 98, "vram": 16, "powerGPU": 360, "length": 310, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rtx-5090",
+    "name": "GeForce RTX 5090",
+    "brand": "NVIDIA",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 100, "vram": 32, "powerGPU": 575, "length": 340, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rx-7600",
+    "name": "Radeon RX 7600",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 56, "vram": 8, "powerGPU": 165, "length": 204, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rx-7600-xt",
+    "name": "Radeon RX 7600 XT",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 60, "vram": 16, "powerGPU": 190, "length": 270, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rx-7700-xt",
+    "name": "Radeon RX 7700 XT",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 71, "vram": 12, "powerGPU": 245, "length": 280, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rx-7800-xt",
+    "name": "Radeon RX 7800 XT",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 83, "vram": 16, "powerGPU": 263, "length": 280, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rx-7900-gre",
+    "name": "Radeon RX 7900 GRE",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 88, "vram": 16, "powerGPU": 260, "length": 280, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rx-7900-xtx",
+    "name": "Radeon RX 7900 XTX",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 97, "vram": 24, "powerGPU": 355, "length": 287, "busType": "PCIe 4.0" }
+  },
+  {
+    "id": "rx-9060-xt-16gb",
+    "name": "Radeon RX 9060 XT 16GB",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 68, "vram": 16, "powerGPU": 160, "length": 240, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rx-9070",
+    "name": "Radeon RX 9070",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 89, "vram": 16, "powerGPU": 220, "length": 280, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "rx-9070-xt",
+    "name": "Radeon RX 9070 XT",
+    "brand": "AMD",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 94, "vram": 16, "powerGPU": 304, "length": 300, "busType": "PCIe 5.0" }
+  },
+  {
+    "id": "arc-b580",
+    "name": "Arc B580",
+    "brand": "Intel",
+    "cat": "gpu",
+    "specs": { "scoreGPU": 62, "vram": 12, "powerGPU": 190, "length": 272, "busType": "PCIe 4.0" }
+  },
+  {
     "id": "b650-tomahawk",
     "name": "MAG B650 Tomahawk WiFi",
     "brand": "MSI",
     "cat": "motherboard",
     "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 6400, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "gigabyte-b650-aorus-elite-ax",
+    "name": "B650 AORUS Elite AX",
+    "brand": "Gigabyte",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 6666, "memMax": 128, "memSlots": 4, "m2": 3, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "asrock-b650m-pro-rs-wifi",
+    "name": "B650M Pro RS WiFi",
+    "brand": "ASRock",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "mATX", "memType": "DDR5", "memFreqMax": 7200, "memMax": 128, "memSlots": 4, "m2": 3, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "asus-tuf-b650-plus-wifi",
+    "name": "TUF Gaming B650-PLUS WiFi",
+    "brand": "ASUS",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 6400, "memMax": 128, "memSlots": 4, "m2": 3, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "msi-b850-gaming-plus-wifi",
+    "name": "B850 Gaming Plus WiFi",
+    "brand": "MSI",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 8200, "memMax": 256, "memSlots": 4, "m2": 3, "pcieSlots": 3, "pciType": "5.0" }
+  },
+  {
+    "id": "gigabyte-b850-aorus-elite-wifi7",
+    "name": "B850 AORUS Elite WiFi7",
+    "brand": "Gigabyte",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 8200, "memMax": 256, "memSlots": 4, "m2": 4, "pcieSlots": 3, "pciType": "5.0" }
+  },
+  {
+    "id": "asus-tuf-x870-plus-wifi",
+    "name": "TUF Gaming X870-PLUS WiFi",
+    "brand": "ASUS",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 8000, "memMax": 256, "memSlots": 4, "m2": 4, "pcieSlots": 4, "pciType": "5.0" }
+  },
+  {
+    "id": "asrock-x870e-taichi",
+    "name": "X870E Taichi",
+    "brand": "ASRock",
+    "cat": "motherboard",
+    "specs": { "socket": "AM5", "form": "ATX", "memType": "DDR5", "memFreqMax": 8200, "memMax": 256, "memSlots": 4, "m2": 4, "pcieSlots": 4, "pciType": "5.0" }
+  },
+  {
+    "id": "msi-b550-tomahawk",
+    "name": "MAG B550 Tomahawk",
+    "brand": "MSI",
+    "cat": "motherboard",
+    "specs": { "socket": "AM4", "form": "ATX", "memType": "DDR4", "memFreqMax": 5100, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "asus-tuf-b550-plus",
+    "name": "TUF Gaming B550-PLUS",
+    "brand": "ASUS",
+    "cat": "motherboard",
+    "specs": { "socket": "AM4", "form": "ATX", "memType": "DDR4", "memFreqMax": 4866, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "gigabyte-b550-aorus-elite-v2",
+    "name": "B550 AORUS Elite V2",
+    "brand": "Gigabyte",
+    "cat": "motherboard",
+    "specs": { "socket": "AM4", "form": "ATX", "memType": "DDR4", "memFreqMax": 4733, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 3, "pciType": "4.0" }
+  },
+  {
+    "id": "msi-pro-b760-p-wifi-ddr4",
+    "name": "PRO B760-P WiFi DDR4",
+    "brand": "MSI",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1700", "form": "ATX", "memType": "DDR4", "memFreqMax": 5333, "memMax": 128, "memSlots": 4, "m2": 2, "pcieSlots": 4, "pciType": "4.0" }
+  },
+  {
+    "id": "asus-prime-b760-plus-d4",
+    "name": "Prime B760-PLUS D4",
+    "brand": "ASUS",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1700", "form": "ATX", "memType": "DDR4", "memFreqMax": 5066, "memMax": 128, "memSlots": 4, "m2": 3, "pcieSlots": 4, "pciType": "4.0" }
+  },
+  {
+    "id": "msi-mag-z790-tomahawk-wifi",
+    "name": "MAG Z790 Tomahawk WiFi",
+    "brand": "MSI",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1700", "form": "ATX", "memType": "DDR5", "memFreqMax": 7200, "memMax": 192, "memSlots": 4, "m2": 4, "pcieSlots": 4, "pciType": "5.0" }
+  },
+  {
+    "id": "gigabyte-z790-aorus-elite-ax",
+    "name": "Z790 AORUS Elite AX",
+    "brand": "Gigabyte",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1700", "form": "ATX", "memType": "DDR5", "memFreqMax": 7600, "memMax": 192, "memSlots": 4, "m2": 4, "pcieSlots": 4, "pciType": "5.0" }
+  },
+  {
+    "id": "msi-pro-z890-a-wifi",
+    "name": "PRO Z890-A WiFi",
+    "brand": "MSI",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1851", "form": "ATX", "memType": "DDR5", "memFreqMax": 9200, "memMax": 256, "memSlots": 4, "m2": 4, "pcieSlots": 4, "pciType": "5.0" }
+  },
+  {
+    "id": "asus-tuf-z890-plus-wifi",
+    "name": "TUF Gaming Z890-PLUS WiFi",
+    "brand": "ASUS",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1851", "form": "ATX", "memType": "DDR5", "memFreqMax": 8800, "memMax": 256, "memSlots": 4, "m2": 4, "pcieSlots": 4, "pciType": "5.0" }
+  },
+  {
+    "id": "gigabyte-b860-aorus-elite-wifi7",
+    "name": "B860 AORUS Elite WiFi7",
+    "brand": "Gigabyte",
+    "cat": "motherboard",
+    "specs": { "socket": "LGA1851", "form": "ATX", "memType": "DDR5", "memFreqMax": 8800, "memMax": 256, "memSlots": 4, "m2": 3, "pcieSlots": 3, "pciType": "5.0" }
   },
   {
     "id": "corsair-vengeance-32-ddr5",
@@ -30,11 +455,151 @@
     "specs": { "type": "DDR5", "size": 32, "speed": 6000, "powerRam": 8 }
   },
   {
+    "id": "gskill-flare-x5-32-ddr5-6000",
+    "name": "Flare X5 32GB (2x16GB) DDR5-6000",
+    "brand": "G.Skill",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 32, "speed": 6000, "powerRam": 8 }
+  },
+  {
+    "id": "gskill-trident-z5-32-ddr5-6400",
+    "name": "Trident Z5 32GB (2x16GB) DDR5-6400",
+    "brand": "G.Skill",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 32, "speed": 6400, "powerRam": 10 }
+  },
+  {
+    "id": "kingston-fury-beast-32-ddr5-6000",
+    "name": "Fury Beast 32GB (2x16GB) DDR5-6000",
+    "brand": "Kingston",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 32, "speed": 6000, "powerRam": 8 }
+  },
+  {
+    "id": "crucial-pro-32-ddr5-5600",
+    "name": "Pro 32GB (2x16GB) DDR5-5600",
+    "brand": "Crucial",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 32, "speed": 5600, "powerRam": 8 }
+  },
+  {
+    "id": "teamgroup-tforce-delta-32-ddr5-6000",
+    "name": "T-Force Delta 32GB (2x16GB) DDR5-6000",
+    "brand": "TeamGroup",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 32, "speed": 6000, "powerRam": 9 }
+  },
+  {
+    "id": "corsair-vengeance-64-ddr5-6000",
+    "name": "Vengeance 64GB (2x32GB) DDR5-6000",
+    "brand": "Corsair",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 64, "speed": 6000, "powerRam": 12 }
+  },
+  {
+    "id": "gskill-trident-z5-64-ddr5-6400",
+    "name": "Trident Z5 64GB (2x32GB) DDR5-6400",
+    "brand": "G.Skill",
+    "cat": "memory",
+    "specs": { "type": "DDR5", "size": 64, "speed": 6400, "powerRam": 14 }
+  },
+  {
+    "id": "corsair-vengeance-lpx-16-ddr4-3200",
+    "name": "Vengeance LPX 16GB (2x8GB) DDR4-3200",
+    "brand": "Corsair",
+    "cat": "memory",
+    "specs": { "type": "DDR4", "size": 16, "speed": 3200, "powerRam": 6 }
+  },
+  {
+    "id": "corsair-vengeance-lpx-32-ddr4-3600",
+    "name": "Vengeance LPX 32GB (2x16GB) DDR4-3600",
+    "brand": "Corsair",
+    "cat": "memory",
+    "specs": { "type": "DDR4", "size": 32, "speed": 3600, "powerRam": 8 }
+  },
+  {
+    "id": "gskill-ripjaws-v-32-ddr4-3600",
+    "name": "Ripjaws V 32GB (2x16GB) DDR4-3600",
+    "brand": "G.Skill",
+    "cat": "memory",
+    "specs": { "type": "DDR4", "size": 32, "speed": 3600, "powerRam": 8 }
+  },
+  {
+    "id": "kingston-fury-beast-32-ddr4-3200",
+    "name": "Fury Beast 32GB (2x16GB) DDR4-3200",
+    "brand": "Kingston",
+    "cat": "memory",
+    "specs": { "type": "DDR4", "size": 32, "speed": 3200, "powerRam": 8 }
+  },
+  {
     "id": "samsung-990-pro-1tb",
     "name": "990 PRO 1TB NVMe",
     "brand": "Samsung",
     "cat": "storage",
     "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 7450, "powerStg": 6 }
+  },
+  {
+    "id": "samsung-990-pro-2tb",
+    "name": "990 PRO 2TB NVMe",
+    "brand": "Samsung",
+    "cat": "storage",
+    "specs": { "capacity": 2000, "iface": "NVMe", "form": "M.2", "read": 7450, "powerStg": 7 }
+  },
+  {
+    "id": "wd-black-sn850x-1tb",
+    "name": "Black SN850X 1TB NVMe",
+    "brand": "Western Digital",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 7300, "powerStg": 6 }
+  },
+  {
+    "id": "wd-black-sn850x-2tb",
+    "name": "Black SN850X 2TB NVMe",
+    "brand": "Western Digital",
+    "cat": "storage",
+    "specs": { "capacity": 2000, "iface": "NVMe", "form": "M.2", "read": 7300, "powerStg": 7 }
+  },
+  {
+    "id": "crucial-t500-1tb",
+    "name": "T500 1TB NVMe",
+    "brand": "Crucial",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 7400, "powerStg": 6 }
+  },
+  {
+    "id": "crucial-p3-plus-1tb",
+    "name": "P3 Plus 1TB NVMe",
+    "brand": "Crucial",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 5000, "powerStg": 5 }
+  },
+  {
+    "id": "kingston-nv3-1tb",
+    "name": "NV3 1TB NVMe",
+    "brand": "Kingston",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 6000, "powerStg": 5 }
+  },
+  {
+    "id": "kingston-kc3000-2tb",
+    "name": "KC3000 2TB NVMe",
+    "brand": "Kingston",
+    "cat": "storage",
+    "specs": { "capacity": 2000, "iface": "NVMe", "form": "M.2", "read": 7000, "powerStg": 7 }
+  },
+  {
+    "id": "wd-blue-sn580-1tb",
+    "name": "Blue SN580 1TB NVMe",
+    "brand": "Western Digital",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "NVMe", "form": "M.2", "read": 4150, "powerStg": 4 }
+  },
+  {
+    "id": "crucial-mx500-1tb",
+    "name": "MX500 1TB SATA",
+    "brand": "Crucial",
+    "cat": "storage",
+    "specs": { "capacity": 1000, "iface": "SATA", "form": "2.5in", "read": 560, "powerStg": 3 }
   },
   {
     "id": "hyper-212-black",
@@ -44,10 +609,108 @@
     "specs": { "tdpCapacity": 150, "height": 159, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1200"], "powerCooler": 3 }
   },
   {
+    "id": "thermalright-peerless-assassin-120",
+    "name": "Peerless Assassin 120 SE",
+    "brand": "Thermalright",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 245, "height": 155, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 5 }
+  },
+  {
+    "id": "thermalright-phantom-spirit-120",
+    "name": "Phantom Spirit 120 SE",
+    "brand": "Thermalright",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 250, "height": 154, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 5 }
+  },
+  {
+    "id": "deepcool-ak400",
+    "name": "AK400",
+    "brand": "DeepCool",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 180, "height": 155, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 3 }
+  },
+  {
+    "id": "noctua-nh-d15",
+    "name": "NH-D15",
+    "brand": "Noctua",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 260, "height": 165, "type": "air", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 5 }
+  },
+  {
+    "id": "corsair-h100i-elite-240",
+    "name": "iCUE H100i Elite 240",
+    "brand": "Corsair",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 250, "radSize": 240, "type": "liquid", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 8 }
+  },
+  {
+    "id": "arctic-liquid-freezer-iii-360",
+    "name": "Liquid Freezer III 360",
+    "brand": "ARCTIC",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 320, "radSize": 360, "type": "liquid", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 10 }
+  },
+  {
+    "id": "nzxt-kraken-360",
+    "name": "Kraken 360",
+    "brand": "NZXT",
+    "cat": "cooling",
+    "specs": { "tdpCapacity": 300, "radSize": 360, "type": "liquid", "sockets": ["AM4", "AM5", "LGA1700", "LGA1851", "LGA1200"], "powerCooler": 10 }
+  },
+  {
     "id": "corsair-rm750e",
     "name": "RM750e",
     "brand": "Corsair",
     "cat": "power",
     "specs": { "watts": 750, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "corsair-rm850e",
+    "name": "RM850e",
+    "brand": "Corsair",
+    "cat": "power",
+    "specs": { "watts": 850, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "corsair-rm1000e",
+    "name": "RM1000e",
+    "brand": "Corsair",
+    "cat": "power",
+    "specs": { "watts": 1000, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "seasonic-focus-gx-750",
+    "name": "Focus GX-750",
+    "brand": "Seasonic",
+    "cat": "power",
+    "specs": { "watts": 750, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "bequiet-pure-power-12m-750",
+    "name": "Pure Power 12 M 750W",
+    "brand": "be quiet!",
+    "cat": "power",
+    "specs": { "watts": 750, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "msi-mag-a850gl-pcie5",
+    "name": "MAG A850GL PCIE5",
+    "brand": "MSI",
+    "cat": "power",
+    "specs": { "watts": 850, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "thermaltake-toughpower-gf3-850",
+    "name": "Toughpower GF3 850W",
+    "brand": "Thermaltake",
+    "cat": "power",
+    "specs": { "watts": 850, "efficiency": "80+ Gold", "modular": true }
+  },
+  {
+    "id": "seasonic-prime-tx-1000",
+    "name": "Prime TX-1000",
+    "brand": "Seasonic",
+    "cat": "power",
+    "specs": { "watts": 1000, "efficiency": "80+ Titanium", "modular": true }
   }
 ]

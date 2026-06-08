@@ -17,5 +17,461 @@
     },
     "likes": 18,
     "vistas": 120
+  },
+  {
+    "_id": "665f00000000000000000012",
+    "title": "AM5 1080p Eficiente",
+    "autor": "Federico",
+    "rating": 4.4,
+    "reviews": 5,
+    "note": "Build moderna de bajo consumo para gaming 1080p.",
+    "build": {
+      "cpu": "ryzen-5-7600",
+      "cooler": "deepcool-ak400",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "kingston-nv3-1tb",
+      "gpu": "rtx-4060",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 34,
+    "vistas": 260
+  },
+  {
+    "_id": "665f00000000000000000013",
+    "title": "Ryzen Gaming Popular",
+    "autor": "Joaquin",
+    "rating": 4.8,
+    "reviews": 9,
+    "note": "Configuracion AM5 muy elegida para 1440p con buen margen de rendimiento.",
+    "build": {
+      "cpu": "ryzen-7-7800x3d",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-b650-aorus-elite-ax",
+      "memory": "gskill-flare-x5-32-ddr5-6000",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rtx-4070-super",
+      "psu": "corsair-rm750e"
+    },
+    "likes": 86,
+    "vistas": 740
+  },
+  {
+    "_id": "665f00000000000000000014",
+    "title": "AM5 1440p AMD",
+    "autor": "Tobias",
+    "rating": 4.7,
+    "reviews": 7,
+    "note": "Build completamente AMD para gaming 1440p con 16GB de VRAM.",
+    "build": {
+      "cpu": "ryzen-7-7700",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "asus-tuf-b650-plus-wifi",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "crucial-t500-1tb",
+      "gpu": "rx-7800-xt",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "likes": 64,
+    "vistas": 520
+  },
+  {
+    "_id": "665f00000000000000000015",
+    "title": "Intel 1080p Accesible",
+    "autor": "Ramiro",
+    "rating": 4.2,
+    "reviews": 4,
+    "note": "Configuracion Intel economica con DDR4 para gaming 1080p.",
+    "build": {
+      "cpu": "core-i5-12400f",
+      "cooler": "hyper-212-black",
+      "motherboard": "asus-prime-b760-plus-d4",
+      "memory": "corsair-vengeance-lpx-16-ddr4-3200",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rtx-3060-12gb",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 41,
+    "vistas": 380
+  },
+  {
+    "_id": "665f00000000000000000016",
+    "title": "Upgrade AM4 Gaming",
+    "autor": "Tiziano",
+    "rating": 4.5,
+    "reviews": 6,
+    "note": "Build AM4 pensada para actualizar una PC DDR4 sin cambiar toda la plataforma.",
+    "build": {
+      "cpu": "ryzen-7-5700x3d",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "msi-b550-tomahawk",
+      "memory": "gskill-ripjaws-v-32-ddr4-3600",
+      "storage": "wd-blue-sn580-1tb",
+      "gpu": "rx-7700-xt",
+      "psu": "corsair-rm750e"
+    },
+    "likes": 57,
+    "vistas": 480
+  },
+  {
+    "_id": "665f00000000000000000017",
+    "title": "Intel DDR5 Streaming",
+    "autor": "Nicolas",
+    "rating": 4.7,
+    "reviews": 8,
+    "note": "Build Intel para gaming, streaming y multitarea con DDR5.",
+    "build": {
+      "cpu": "core-i5-14600k",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "gigabyte-z790-aorus-elite-ax",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-4070-super",
+      "psu": "corsair-rm850e"
+    },
+    "likes": 73,
+    "vistas": 690
+  },
+  {
+    "_id": "665f00000000000000000018",
+    "title": "Creative Pro AM5",
+    "autor": "Equipo Will It Run",
+    "rating": 4.9,
+    "reviews": 11,
+    "note": "Configuracion para edicion, render y trabajo creativo pesado.",
+    "build": {
+      "cpu": "ryzen-9-9950x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asus-tuf-x870-plus-wifi",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-4080-super",
+      "psu": "corsair-rm1000e"
+    },
+    "likes": 92,
+    "vistas": 860
+  },
+  {
+    "_id": "665f00000000000000000019",
+    "title": "Arquitectura Alta Gama",
+    "autor": "Alejo",
+    "rating": 4.8,
+    "reviews": 10,
+    "note": "Build orientada a arquitectura, modelado 3D y render con GPU potente.",
+    "build": {
+      "cpu": "core-i7-14700k",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "msi-mag-z790-tomahawk-wifi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-4070-ti-super",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "likes": 77,
+    "vistas": 710
+  },
+  {
+    "_id": "665f00000000000000000020",
+    "title": "4K Entusiasta",
+    "autor": "Facundo",
+    "rating": 4.9,
+    "reviews": 13,
+    "note": "Configuracion de alta gama para gaming 4K y tareas graficas exigentes.",
+    "build": {
+      "cpu": "ryzen-7-9800x3d",
+      "cooler": "nzxt-kraken-360",
+      "motherboard": "asrock-x870e-taichi",
+      "memory": "gskill-trident-z5-32-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5080",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "likes": 105,
+    "vistas": 980
+  },
+  {
+    "_id": "665f00000000000000000021",
+    "title": "AMD 4K Valor",
+    "autor": "Gonzalo",
+    "rating": 4.7,
+    "reviews": 8,
+    "note": "Build AMD de alto rendimiento para 4K con buena cantidad de VRAM.",
+    "build": {
+      "cpu": "ryzen-9-9900x",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "gigabyte-b850-aorus-elite-wifi7",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "kingston-kc3000-2tb",
+      "gpu": "rx-7900-xtx",
+      "psu": "corsair-rm1000e"
+    },
+    "likes": 81,
+    "vistas": 790
+  },
+  {
+    "_id": "665f00000000000000000022",
+    "title": "RTX 5070 Balanceada",
+    "autor": "Ivan",
+    "rating": 4.6,
+    "reviews": 6,
+    "note": "Build moderna para 1440p alto usando GPU NVIDIA de nueva generacion.",
+    "build": {
+      "cpu": "ryzen-5-9600x",
+      "cooler": "deepcool-ak400",
+      "motherboard": "msi-b850-gaming-plus-wifi",
+      "memory": "teamgroup-tforce-delta-32-ddr5-6000",
+      "storage": "crucial-t500-1tb",
+      "gpu": "rtx-5070",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "likes": 69,
+    "vistas": 610
+  },
+  {
+    "_id": "665f00000000000000000023",
+    "title": "RX 9070 XT Gaming",
+    "autor": "Tiziano",
+    "rating": 4.7,
+    "reviews": 7,
+    "note": "Configuracion AM5 con GPU AMD actual para 1440p alto.",
+    "build": {
+      "cpu": "ryzen-7-9700x",
+      "cooler": "thermalright-phantom-spirit-120",
+      "motherboard": "asus-tuf-b650-plus-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rx-9070-xt",
+      "psu": "corsair-rm850e"
+    },
+    "likes": 72,
+    "vistas": 650
+  },
+  {
+    "_id": "665f00000000000000000024",
+    "title": "Intel Core Ultra Nueva Plataforma",
+    "autor": "Pablo",
+    "rating": 4.5,
+    "reviews": 5,
+    "note": "Build Intel moderna con socket LGA1851 y DDR5 rapida.",
+    "build": {
+      "cpu": "core-ultra-7-265k",
+      "cooler": "corsair-h100i-elite-240",
+      "motherboard": "msi-pro-z890-a-wifi",
+      "memory": "gskill-trident-z5-32-ddr5-6400",
+      "storage": "samsung-990-pro-1tb",
+      "gpu": "rtx-5070-ti",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "likes": 58,
+    "vistas": 540
+  },
+  {
+    "_id": "665f00000000000000000025",
+    "title": "Entrada Actual con RTX 5060",
+    "autor": "Equipo Will It Run",
+    "rating": 4.3,
+    "reviews": 4,
+    "note": "Build de entrada moderna para 1080p con plataforma AM5.",
+    "build": {
+      "cpu": "ryzen-5-7600",
+      "cooler": "deepcool-ak400",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "crucial-pro-32-ddr5-5600",
+      "storage": "kingston-nv3-1tb",
+      "gpu": "rtx-5060",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 45,
+    "vistas": 410
+  },
+  {
+    "_id": "665f00000000000000000026",
+    "title": "1080p AMD Economica",
+    "autor": "Javier",
+    "rating": 4.2,
+    "reviews": 3,
+    "note": "Configuracion accesible con GPU AMD para jugar en 1080p.",
+    "build": {
+      "cpu": "ryzen-5-5600",
+      "cooler": "hyper-212-black",
+      "motherboard": "asus-tuf-b550-plus",
+      "memory": "kingston-fury-beast-32-ddr4-3200",
+      "storage": "crucial-mx500-1tb",
+      "gpu": "rx-7600",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 39,
+    "vistas": 350
+  },
+  {
+    "_id": "665f00000000000000000027",
+    "title": "1440p AMD Popular",
+    "autor": "Maximo",
+    "rating": 4.6,
+    "reviews": 7,
+    "note": "Build con buena relacion entre CPU, GPU y memoria para 1440p.",
+    "build": {
+      "cpu": "ryzen-5-9600x",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-b650-aorus-elite-ax",
+      "memory": "corsair-vengeance-32-ddr5",
+      "storage": "wd-black-sn850x-1tb",
+      "gpu": "rx-7900-gre",
+      "psu": "corsair-rm850e"
+    },
+    "likes": 66,
+    "vistas": 600
+  },
+  {
+    "_id": "665f00000000000000000028",
+    "title": "Workstation Mixta",
+    "autor": "Juan",
+    "rating": 4.8,
+    "reviews": 9,
+    "note": "Build para uso mixto entre gaming, edicion y productividad.",
+    "build": {
+      "cpu": "core-i9-14900k",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "gigabyte-z790-aorus-elite-ax",
+      "memory": "corsair-vengeance-64-ddr5-6000",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-4080-super",
+      "psu": "corsair-rm1000e"
+    },
+    "likes": 88,
+    "vistas": 830
+  },
+  {
+    "_id": "665f00000000000000000029",
+    "title": "PC Compacta mATX AM5",
+    "autor": "Alfredo",
+    "rating": 4.4,
+    "reviews": 5,
+    "note": "Build mATX con componentes eficientes para gabinete compacto.",
+    "build": {
+      "cpu": "ryzen-7-7700",
+      "cooler": "deepcool-ak400",
+      "motherboard": "asrock-b650m-pro-rs-wifi",
+      "memory": "kingston-fury-beast-32-ddr5-6000",
+      "storage": "wd-blue-sn580-1tb",
+      "gpu": "rtx-4060-ti-16gb",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "likes": 49,
+    "vistas": 430
+  },
+  {
+    "_id": "665f00000000000000000030",
+    "title": "Intel 1440p DDR4",
+    "autor": "Martin",
+    "rating": 4.3,
+    "reviews": 4,
+    "note": "Build Intel con DDR4 para reutilizar memoria y mantener buen rendimiento.",
+    "build": {
+      "cpu": "core-i5-14400f",
+      "cooler": "hyper-212-black",
+      "motherboard": "msi-pro-b760-p-wifi-ddr4",
+      "memory": "corsair-vengeance-lpx-32-ddr4-3600",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rtx-4060-ti-8gb",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 44,
+    "vistas": 390
+  },
+  {
+    "_id": "665f00000000000000000031",
+    "title": "Core Ultra 5 Gaming",
+    "autor": "Dante",
+    "rating": 4.2,
+    "reviews": 3,
+    "note": "Build de nueva plataforma Intel para gaming 1080p alto y 1440p inicial.",
+    "build": {
+      "cpu": "core-ultra-5-245k",
+      "cooler": "thermalright-peerless-assassin-120",
+      "motherboard": "gigabyte-b860-aorus-elite-wifi7",
+      "memory": "crucial-pro-32-ddr5-5600",
+      "storage": "kingston-nv3-1tb",
+      "gpu": "arc-b580",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 31,
+    "vistas": 300
+  },
+  {
+    "_id": "665f00000000000000000032",
+    "title": "Render Extremo RTX 5090",
+    "autor": "Carlos",
+    "rating": 4.9,
+    "reviews": 15,
+    "note": "Configuracion entusiasta para render, IA y cargas graficas extremas.",
+    "build": {
+      "cpu": "ryzen-9-9950x3d",
+      "cooler": "nzxt-kraken-360",
+      "motherboard": "asrock-x870e-taichi",
+      "memory": "gskill-trident-z5-64-ddr5-6400",
+      "storage": "samsung-990-pro-2tb",
+      "gpu": "rtx-5090",
+      "psu": "seasonic-prime-tx-1000"
+    },
+    "likes": 121,
+    "vistas": 1150
+  },
+  {
+    "_id": "665f00000000000000000033",
+    "title": "RX 9060 XT 1080p Plus",
+    "autor": "Lucila",
+    "rating": 4.3,
+    "reviews": 4,
+    "note": "Build moderna para 1080p alto con 16GB de VRAM.",
+    "build": {
+      "cpu": "ryzen-5-7600x",
+      "cooler": "deepcool-ak400",
+      "motherboard": "msi-b850-gaming-plus-wifi",
+      "memory": "teamgroup-tforce-delta-32-ddr5-6000",
+      "storage": "crucial-p3-plus-1tb",
+      "gpu": "rx-9060-xt-16gb",
+      "psu": "bequiet-pure-power-12m-750"
+    },
+    "likes": 36,
+    "vistas": 330
+  },
+  {
+    "_id": "665f00000000000000000034",
+    "title": "AM4 Economica Mejorada",
+    "autor": "Sofia",
+    "rating": 4.1,
+    "reviews": 3,
+    "note": "Configuracion AM4 simple para usuarios que priorizan costo y compatibilidad.",
+    "build": {
+      "cpu": "ryzen-5-5600",
+      "cooler": "hyper-212-black",
+      "motherboard": "gigabyte-b550-aorus-elite-v2",
+      "memory": "corsair-vengeance-lpx-16-ddr4-3200",
+      "storage": "crucial-mx500-1tb",
+      "gpu": "rtx-4060",
+      "psu": "seasonic-focus-gx-750"
+    },
+    "likes": 28,
+    "vistas": 270
+  },
+  {
+    "_id": "665f00000000000000000035",
+    "title": "Gaming Premium 1440p",
+    "autor": "Tiziano",
+    "rating": 4.8,
+    "reviews": 10,
+    "note": "Build premium para 1440p ultra con componentes actuales y margen de potencia.",
+    "build": {
+      "cpu": "ryzen-7-9800x3d",
+      "cooler": "arctic-liquid-freezer-iii-360",
+      "motherboard": "asus-tuf-x870-plus-wifi",
+      "memory": "gskill-trident-z5-32-ddr5-6400",
+      "storage": "wd-black-sn850x-2tb",
+      "gpu": "rtx-5070-ti",
+      "psu": "msi-mag-a850gl-pcie5"
+    },
+    "likes": 94,
+    "vistas": 870
   }
 ]

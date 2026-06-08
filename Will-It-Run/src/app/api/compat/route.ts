@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { cacheAside, keys, TTL } from "@/lib/cache";
-import { getAdvertencias, validarBuild } from "@/lib/queries/cypher";
+import { validarBuild } from "@/lib/queries/cypher";
 import { SLOTS } from "@/lib/models/Ensamble";
+import {
+    buildHash,
+    getAdvertenciasActivas,
+} from "@/lib/warnings/activeWarnings";
 
 // Validación de compatibilidad de una build (PDF §6, motor Neo4j | Redis).
 // Patrón Redis-first: se cachea el resultado de validarBuild para el par
@@ -25,14 +29,18 @@ export async function POST(req: Request) {
     }
     const { componentes } = parsed.data;
 
-    const buildHash = SLOTS.map((slot) => componentes[slot] ?? "_").join(":");
-    const cacheKey = keys.compat(buildHash);
-    const resultado = await cacheAside(cacheKey, TTL.COMPAT, () =>
-        validarBuild(componentes).then(async (validacion) => ({
-            ok: validacion.ok,
-            issues: [...validacion.issues, ...(await getAdvertencias(componentes))],
-        })),
-    );
+    const hash = buildHash(componentes, SLOTS);
+    const [validacion, advertencias] = await Promise.all([
+        cacheAside(keys.compat(hash), TTL.COMPAT, () => validarBuild(componentes)),
+        cacheAside(keys.advertencias(hash), TTL.ADVERTENCIAS, () =>
+            getAdvertenciasActivas(componentes),
+        ),
+    ]);
+
+    const resultado = {
+        ok: validacion.ok,
+        issues: [...validacion.issues, ...advertencias],
+    };
 
     return NextResponse.json(resultado);
 }

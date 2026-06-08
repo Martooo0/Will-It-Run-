@@ -14,6 +14,8 @@ o Redis.
   - `npm run seed:mongo`: carga JSONs de `data/` en MongoDB.
   - `npm run seed:neo4j`: carga `data/graph.json` en Neo4j.
   - `npm run seed:all`: corre ambos seeds.
+- `consultas/mongo-carga.mongodb.js`: carga datos demo con MongoDB puro.
+- `consultas/mongo-consultas.mongodb.js`: ejecuta consultas MongoDB puras.
 
 ## 2. Conexiones a bases
 
@@ -101,6 +103,21 @@ npm run seed:all
 
 Atencion: `seed:mongo` borra y vuelve a insertar las colecciones definidas en
 `data/`. No correrlo si tienen datos locales que quieran conservar.
+
+Para trabajar como en clase con MongoDB, tambien pueden cargar datos sin tocar
+TypeScript ni JSON ejecutando scripts `.mongodb.js`:
+
+```powershell
+Get-Content consultas\mongo-carga.mongodb.js | docker exec -i wir-mongo mongosh willitrun
+```
+
+Y para correr consultas:
+
+```powershell
+Get-Content consultas\mongo-consultas.mongodb.js | docker exec -i wir-mongo mongosh willitrun
+```
+
+Los cambios se ven en MongoDB Compass al refrescar `willitrun -> components`.
 
 ## 7. Como leer un `route.ts`
 

@@ -3,7 +3,7 @@
     "tipo": "review",
     "targetId": "ryzen-5-7600",
     "targetType": "componente",
-    "autor": "Maximo",
+    "autor": "Nicolas",
     "rating": 5,
     "comentario": "Buen rendimiento para una build AM5 de gama media."
   },
@@ -11,7 +11,7 @@
     "tipo": "review",
     "targetId": "665f00000000000000000001",
     "targetType": "build",
-    "autor": "Juan",
+    "autor": "Marcelo",
     "rating": 4,
     "comentario": "Build equilibrada para probar compatibilidad y scoring."
   },
@@ -19,7 +19,360 @@
     "tipo": "reporte_problema",
     "targetId": "rtx-4070",
     "targetType": "componente",
-    "autor": "Facundo",
+    "autor": "Federico",
     "comentario": "Verificar consumo total al combinar con fuentes de menor wattage."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rtx-4070",
+    "targetType": "componente",
+    "autor": "Martin",
+    "rating": 5,
+    "comentario": "Muy buena GPU para jugar en 1440p con consumo moderado."
+  },
+  {
+    "tipo": "review",
+    "targetId": "b650-tomahawk",
+    "targetType": "componente",
+    "autor": "Fabricio",
+    "rating": 5,
+    "comentario": "Motherboard completa para AM5, con buena conectividad y soporte DDR5."
+  },
+  {
+    "tipo": "review",
+    "targetId": "corsair-vengeance-32-ddr5",
+    "targetType": "componente",
+    "autor": "Francisco",
+    "rating": 5,
+    "comentario": "Kit de memoria muy recomendable para builds AM5 de gama media."
+  },
+  {
+    "tipo": "review",
+    "targetId": "samsung-990-pro-1tb",
+    "targetType": "componente",
+    "autor": "Joaquin",
+    "rating": 5,
+    "comentario": "SSD rapido para sistema operativo, juegos y carga de proyectos pesados."
+  },
+  {
+    "tipo": "review",
+    "targetId": "hyper-212-black",
+    "targetType": "componente",
+    "autor": "Dante",
+    "rating": 4,
+    "comentario": "Cooler economico y suficiente para procesadores de consumo medio."
+  },
+  {
+    "tipo": "review",
+    "targetId": "corsair-rm750e",
+    "targetType": "componente",
+    "autor": "Rafael",
+    "rating": 5,
+    "comentario": "Fuente confiable para una build con GPU de gama media o media-alta."
+  },
+  {
+    "tipo": "review",
+    "targetId": "ryzen-7-7800x3d",
+    "targetType": "componente",
+    "autor": "Vanina",
+    "rating": 5,
+    "comentario": "Excelente procesador para gaming, especialmente en builds de alto rendimiento."
+  },
+  {
+    "tipo": "review",
+    "targetId": "ryzen-7-9800x3d",
+    "targetType": "componente",
+    "autor": "Ivan",
+    "rating": 5,
+    "comentario": "Muy buen rendimiento en juegos y una opcion fuerte para plataforma AM5 actual."
+  },
+  {
+    "tipo": "review",
+    "targetId": "ryzen-9-9950x",
+    "targetType": "componente",
+    "autor": "Juan",
+    "rating": 5,
+    "comentario": "Procesador ideal para productividad, render y multitarea exigente."
+  },
+  {
+    "tipo": "review",
+    "targetId": "core-i5-14400f",
+    "targetType": "componente",
+    "autor": "Tiziano",
+    "rating": 4,
+    "comentario": "Buena CPU de entrada para gaming con GPU dedicada."
+  },
+  {
+    "tipo": "review",
+    "targetId": "core-i7-14700k",
+    "targetType": "componente",
+    "autor": "Facundo",
+    "rating": 5,
+    "comentario": "Procesador potente para gaming, streaming y trabajos de edicion."
+  },
+  {
+    "tipo": "review",
+    "targetId": "core-ultra-7-265k",
+    "targetType": "componente",
+    "autor": "Martin",
+    "rating": 4,
+    "comentario": "Buena opcion moderna para builds Intel con motherboard LGA1851."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rtx-4060",
+    "targetType": "componente",
+    "autor": "Maximo",
+    "rating": 4,
+    "comentario": "GPU eficiente para 1080p y equipos con bajo consumo."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rtx-4070-super",
+    "targetType": "componente",
+    "autor": "Lorenzo",
+    "rating": 5,
+    "comentario": "Muy buena placa para 1440p, con mejor margen que la RTX 4070 base."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rtx-4070-ti-super",
+    "targetType": "componente",
+    "autor": "Leandro",
+    "rating": 5,
+    "comentario": "La VRAM de 16GB ayuda mucho para juegos actuales y tareas creativas."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rtx-4080-super",
+    "targetType": "componente",
+    "autor": "Guido",
+    "rating": 5,
+    "comentario": "GPU de alta gama para 4K y workloads graficos pesados."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rtx-5090",
+    "targetType": "componente",
+    "autor": "Lautaro",
+    "rating": 5,
+    "comentario": "Placa extrema, recomendable solo si la build tiene fuente y gabinete acordes."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rx-7800-xt",
+    "targetType": "componente",
+    "autor": "Ignacio",
+    "rating": 5,
+    "comentario": "Muy buena alternativa para 1440p por su memoria de 16GB."
+  },
+  {
+    "tipo": "review",
+    "targetId": "rx-9070-xt",
+    "targetType": "componente",
+    "autor": "Lorenzo",
+    "rating": 5,
+    "comentario": "GPU potente para una build moderna orientada a 1440p alto."
+  },
+  {
+    "tipo": "review",
+    "targetId": "arc-b580",
+    "targetType": "componente",
+    "autor": "Maximo",
+    "rating": 4,
+    "comentario": "Opcion interesante para gama media si se busca buena VRAM y precio competitivo."
+  },
+  {
+    "tipo": "review",
+    "targetId": "gigabyte-b650-aorus-elite-ax",
+    "targetType": "componente",
+    "autor": "Juan Pablo",
+    "rating": 5,
+    "comentario": "Motherboard AM5 muy completa para gaming y expansion futura."
+  },
+  {
+    "tipo": "review",
+    "targetId": "msi-b850-gaming-plus-wifi",
+    "targetType": "componente",
+    "autor": "Martin",
+    "rating": 4,
+    "comentario": "Buena base para Ryzen actuales con soporte moderno y conectividad WiFi."
+  },
+  {
+    "tipo": "review",
+    "targetId": "asus-tuf-x870-plus-wifi",
+    "targetType": "componente",
+    "autor": "Facundo",
+    "rating": 5,
+    "comentario": "Placa robusta para una build AM5 de alta gama."
+  },
+  {
+    "tipo": "review",
+    "targetId": "msi-mag-z790-tomahawk-wifi",
+    "targetType": "componente",
+    "autor": "Alfredo",
+    "rating": 5,
+    "comentario": "Muy buena motherboard para procesadores Intel LGA1700 con DDR5."
+  },
+  {
+    "tipo": "review",
+    "targetId": "msi-pro-z890-a-wifi",
+    "targetType": "componente",
+    "autor": "Lorenzo",
+    "rating": 4,
+    "comentario": "Correcta para builds Intel nuevas con Core Ultra y memoria DDR5 rapida."
+  },
+  {
+    "tipo": "review",
+    "targetId": "gskill-flare-x5-32-ddr5-6000",
+    "targetType": "componente",
+    "autor": "Federico",
+    "rating": 5,
+    "comentario": "Muy buen kit DDR5 para Ryzen, con capacidad y velocidad equilibradas."
+  },
+  {
+    "tipo": "review",
+    "targetId": "corsair-vengeance-64-ddr5-6000",
+    "targetType": "componente",
+    "autor": "Joaquin",
+    "rating": 5,
+    "comentario": "Recomendable para edicion, arquitectura y multitarea pesada."
+  },
+  {
+    "tipo": "review",
+    "targetId": "corsair-vengeance-lpx-32-ddr4-3600",
+    "targetType": "componente",
+    "autor": "Alejo",
+    "rating": 4,
+    "comentario": "Buen kit para actualizar una build DDR4 sin gastar de mas."
+  },
+  {
+    "tipo": "review",
+    "targetId": "wd-black-sn850x-2tb",
+    "targetType": "componente",
+    "autor": "Sofia",
+    "rating": 5,
+    "comentario": "Excelente SSD para juegos pesados, proyectos grandes y uso intensivo."
+  },
+  {
+    "tipo": "review",
+    "targetId": "crucial-p3-plus-1tb",
+    "targetType": "componente",
+    "autor": "Tobias",
+    "rating": 4,
+    "comentario": "SSD NVMe accesible para ampliar almacenamiento sin complicaciones."
+  },
+  {
+    "tipo": "review",
+    "targetId": "thermalright-peerless-assassin-120",
+    "targetType": "componente",
+    "autor": "Ramiro",
+    "rating": 5,
+    "comentario": "Cooler por aire con gran rendimiento para su precio."
+  },
+  {
+    "tipo": "review",
+    "targetId": "arctic-liquid-freezer-iii-360",
+    "targetType": "componente",
+    "autor": "Lucas",
+    "rating": 5,
+    "comentario": "Muy buena refrigeracion para CPUs de alto consumo."
+  },
+  {
+    "tipo": "review",
+    "targetId": "corsair-rm850e",
+    "targetType": "componente",
+    "autor": "Facundo",
+    "rating": 5,
+    "comentario": "Fuente recomendable para GPUs de gama media-alta con margen suficiente."
+  },
+  {
+    "tipo": "review",
+    "targetId": "msi-mag-a850gl-pcie5",
+    "targetType": "componente",
+    "autor": "Carlos",
+    "rating": 4,
+    "comentario": "Buena fuente para builds modernas que requieren conectores actuales."
+  },
+  {
+    "tipo": "review",
+    "targetId": "seasonic-prime-tx-1000",
+    "targetType": "componente",
+    "autor": "Gonzalo",
+    "rating": 5,
+    "comentario": "Fuente premium para configuraciones de alta gama o entusiastas."
+  },
+  {
+    "tipo": "review",
+    "targetId": "665f00000000000000000001",
+    "targetType": "build",
+    "autor": "Hernan",
+    "rating": 5,
+    "comentario": "La combinacion AM5 con RTX 4070 queda muy balanceada para gaming 1440p."
+  },
+  {
+    "tipo": "review",
+    "targetId": "665f00000000000000000001",
+    "targetType": "build",
+    "autor": "Luca",
+    "rating": 4,
+    "comentario": "Buena build de referencia para demostrar MongoDB, Neo4j y Redis."
+  },
+  {
+    "tipo": "review",
+    "targetId": "665f00000000000000000001",
+    "targetType": "build",
+    "autor": "Bautista",
+    "rating": 4,
+    "comentario": "La compatibilidad entre CPU, motherboard, RAM y GPU se entiende bien en el grafo."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "rtx-5090",
+    "targetType": "componente",
+    "autor": "Juan",
+    "comentario": "Requiere revisar margen de fuente por su consumo elevado."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "core-i9-14900k",
+    "targetType": "componente",
+    "autor": "Lorenzo",
+    "comentario": "Puede necesitar refrigeracion de alta capacidad en cargas sostenidas."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "ryzen-9-9950x",
+    "targetType": "componente",
+    "autor": "Martin",
+    "comentario": "Para productividad pesada conviene validar cooler y flujo de aire."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "rtx-4080-super",
+    "targetType": "componente",
+    "autor": "Tiziano",
+    "comentario": "Verificar longitud de la GPU antes de usar gabinetes compactos."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "corsair-vengeance-64-ddr5-6000",
+    "targetType": "componente",
+    "autor": "Facundo",
+    "comentario": "En algunas motherboards puede requerir revisar frecuencia maxima soportada."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "arctic-liquid-freezer-iii-360",
+    "targetType": "componente",
+    "autor": "Maximo",
+    "comentario": "Verificar compatibilidad fisica del radiador de 360mm con el gabinete."
+  },
+  {
+    "tipo": "reporte_problema",
+    "targetId": "665f00000000000000000001",
+    "targetType": "build",
+    "autor": "Lucila",
+    "comentario": "La build es compatible, pero conviene monitorear margen de potencia si se cambia la GPU."
   }
 ]

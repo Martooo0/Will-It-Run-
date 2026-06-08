@@ -1,0 +1,40 @@
+ECHO "=== Will It Run? - Demo de Redis (puro) ==="
+ECHO "Ejecutar interactivo:  docker exec -it wir-redis redis-cli   y pegar bloque por bloque"
+ECHO "Ejecutar de una:       Get-Content consultas/redis-demo.txt | docker exec -i wir-redis redis-cli"
+
+ECHO "--- 1) Ranking de builds populares (sorted set) ---"
+DEL builds:trending:semana
+ZINCRBY builds:trending:semana 5 665f00000000000000000001
+ZINCRBY builds:trending:semana 8 build-oficina-economica
+ZINCRBY builds:trending:semana 3 build-gamer-gama-alta
+ZREVRANGE builds:trending:semana 0 9 WITHSCORES
+ZREVRANK builds:trending:semana 665f00000000000000000001
+
+ECHO "--- 2) Ranking de componentes por categoria (sorted set) ---"
+DEL componentes:trending:cpu
+DEL componentes:trending:gpu
+ZINCRBY componentes:trending:cpu 12 ryzen-5-7600
+ZINCRBY componentes:trending:cpu 7 i5-14600k
+ZINCRBY componentes:trending:gpu 20 rtx-4070
+ZREVRANGE componentes:trending:cpu 0 9 WITHSCORES
+ZREVRANGE componentes:trending:gpu 0 9 WITHSCORES
+
+ECHO "--- 3) Cache de validacion de compatibilidad (string + TTL 1h) ---"
+SET compat:ryzen-5-7600:b650-tomahawk "{\"ok\":true,\"issues\":[]}" EX 3600
+GET compat:ryzen-5-7600:b650-tomahawk
+TTL compat:ryzen-5-7600:b650-tomahawk
+
+ECHO "--- 4) Cache de build score y tier (hash + TTL 24h) ---"
+DEL buildscore:665f00000000000000000001
+HSET buildscore:665f00000000000000000001 cpuScore 72 gpuScore 80 ramSpeed 6000 totalScore 76 tier A bottleneck balanced
+EXPIRE buildscore:665f00000000000000000001 86400
+HGETALL buildscore:665f00000000000000000001
+TTL buildscore:665f00000000000000000001
+
+ECHO "--- 5) Cache de advertencias activas (string + TTL 30min) ---"
+SET advertencias:665f00000000000000000001 "[{\"id\":\"gpu-consumo-medio\",\"severidad\":\"warn\"}]" EX 1800
+GET advertencias:665f00000000000000000001
+TTL advertencias:665f00000000000000000001
+
+ECHO "--- Inspeccion general ---"
+KEYS *

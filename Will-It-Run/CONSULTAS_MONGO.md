@@ -12,14 +12,30 @@ db.components.find({ cat: "cpu" })
 TypeScript solo queda como una capa de conexion para que la app pueda hablar con
 MongoDB. Para practicar, presentar o documentar, usen estas consultas Mongo.
 
-## 1. Como abrir MongoDB
+## 1. Como trabajar con MongoDB en este proyecto
 
-Desde la carpeta del proyecto:
+Hay dos formas validas de cargar datos:
+
+1. **Scripts Mongo puros (`.mongodb.js`)**: es el flujo mas parecido a clase.
+   Escriben `db.components.insertOne(...)`, `find(...)`, `updateOne(...)`,
+   `aggregate(...)` y lo ejecutan con `mongosh`.
+2. **Seed desde JSON (`data/*.json`)**: sirve para restaurar un dataset base
+   igual para todo el equipo. El comando `npm run seed:mongo` borra las
+   colecciones cargadas por el seed y las vuelve a crear desde los JSON.
+
+Para practicar MongoDB, usen principalmente estos archivos:
+
+- `consultas/mongo-carga.mongodb.js`: comandos `CREATE` para cargar datos demo.
+- `consultas/mongo-consultas.mongodb.js`: consultas `READ` y aggregations.
+- `consultas/mongo-demo.mongodb.js`: demo completa vieja con CRUD junto.
+
+## 2. Como abrir MongoDB
+
+Desde la carpeta real del proyecto:
 
 ```bash
 cd Will-It-Run
 docker compose up -d
-npm run seed:mongo
 docker exec -it wir-mongo mongosh willitrun
 ```
 
@@ -29,7 +45,53 @@ Cuando vean el prompt de Mongo, ya pueden pegar consultas como estas:
 db.components.find({ cat: "cpu" })
 ```
 
-## 2. Colecciones disponibles
+Tambien pueden abrir MongoDB Compass con:
+
+```text
+mongodb://127.0.0.1:27018/willitrun?directConnection=true
+```
+
+## 3. Como ejecutar los scripts `.mongodb.js`
+
+Para cargar datos demo directamente en MongoDB:
+
+```powershell
+Get-Content consultas\mongo-carga.mongodb.js | docker exec -i wir-mongo mongosh willitrun
+```
+
+Despues de ejecutarlo, abrir o refrescar en Compass:
+
+```text
+willitrun -> components
+```
+
+Para ejecutar consultas y ver resultados en la terminal:
+
+```powershell
+Get-Content consultas\mongo-consultas.mongodb.js | docker exec -i wir-mongo mongosh willitrun
+```
+
+Si prefieren Compass:
+
+1. Entrar a `willitrun`.
+2. Entrar a la coleccion, por ejemplo `components`.
+3. Pegar filtros en el campo `Filter`, por ejemplo:
+
+```json
+{ "cat": "cpu" }
+```
+
+Para aggregations, usar la pestana `Aggregations` de Compass.
+
+## 4. Donde se ven los resultados
+
+- Si ejecutan un script con `mongosh`, los resultados aparecen en la terminal.
+- Si hacen `insertOne`, `insertMany`, `updateOne` o `deleteOne`, los cambios se
+  ven en MongoDB Compass al refrescar la coleccion.
+- Compass es la mejor herramienta para inspeccionar documentos visualmente.
+- La terminal es mas practica para ejecutar archivos completos.
+
+## 5. Colecciones disponibles
 
 El seed carga estas colecciones:
 
@@ -47,7 +109,10 @@ En MongoDB los nombres reales quedan asi:
 - `communitybuilds`
 - `reviews`
 
-## 3. READ - consultas simples
+Aunque no corran el seed, estas colecciones se crean automaticamente cuando
+insertan el primer documento.
+
+## 6. READ - consultas simples
 
 Traer todos los componentes:
 
@@ -87,7 +152,7 @@ Buscar un componente por id:
 db.components.findOne({ id: "ryzen-5-7600" })
 ```
 
-## 4. READ - consultas sobre specs
+## 7. READ - consultas sobre specs
 
 `specs` es un subdocumento. Por eso se consulta con punto:
 
@@ -134,7 +199,7 @@ db.components.find({
 })
 ```
 
-## 5. Ordenar, limitar y proyectar campos
+## 8. Ordenar, limitar y proyectar campos
 
 Top 5 GPUs por score:
 
@@ -163,7 +228,7 @@ db.components.find(
 )
 ```
 
-## 6. CREATE - insertar un componente demo
+## 9. CREATE - insertar un componente demo
 
 Esta insercion usa un id de practica: `demo-gpu-clase`.
 
@@ -191,7 +256,7 @@ Verificar que se inserto:
 db.components.findOne({ id: "demo-gpu-clase" })
 ```
 
-## 7. UPDATE - actualizar el componente demo
+## 10. UPDATE - actualizar el componente demo
 
 Actualizar campos simples:
 
@@ -230,7 +295,7 @@ db.components.findOne(
 )
 ```
 
-## 8. DELETE - borrar el componente demo
+## 11. DELETE - borrar el componente demo
 
 Borrar solo el documento de practica:
 
@@ -246,7 +311,7 @@ db.components.findOne({ id: "demo-gpu-clase" })
 
 Si devuelve `null`, se borro correctamente.
 
-## 9. Queries sobre ensambles
+## 12. Queries sobre ensambles
 
 Traer builds publicas:
 
@@ -284,7 +349,7 @@ db.ensambles
   .sort({ buildScore: -1 })
 ```
 
-## 10. Queries sobre reviews
+## 13. Queries sobre reviews
 
 Reviews de componentes:
 
@@ -317,7 +382,7 @@ db.reviews.find({
 })
 ```
 
-## 11. Aggregation pipeline
+## 14. Aggregation pipeline
 
 Cantidad de componentes por categoria:
 
@@ -400,7 +465,7 @@ db.components.aggregate([
 ])
 ```
 
-## 12. Donde entra TypeScript
+## 15. Donde entra TypeScript
 
 Ustedes pueden pensar asi:
 
