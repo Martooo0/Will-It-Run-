@@ -5,6 +5,14 @@
 Estructura: sorted set `builds:trending:{periodo}`, score = visitas o likes acumulados. Entrada:
 el período + cantidad de resultados (top N). Salida: ranking ordenado con su puntaje.*
 
+## Diagrama de flujo en las bases de datos
+
+```text
+Cliente --> Redis
+            sorted set builds:trending:{periodo}
+            ZINCRBY (registrar visita/like) / ZREVRANGE (top N)
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** las interacciones de los usuarios (visitas / likes) sobre cada build.
@@ -18,15 +26,22 @@ el período + cantidad de resultados (top N). Salida: ranking ordenado con su pu
 
 ## 1) Carga del dato (de dónde nace)
 
-Cada visita/like es una interacción. Acá se simulan tres builds con distinto puntaje.
+Cada visita/like es una interacción. Acá se simulan tres builds **reales** de `data/builds.json`
+con distinto puntaje (el _id en Mongo es el member del sorted set):
+
+| member (`_id`)             | build                    |
+|----------------------------|--------------------------|
+| `665f00000000000000000003` | Ryzen 1440p Popular      |
+| `665f00000000000000000001` | AM5 Gaming Equilibrada   |
+| `665f00000000000000000009` | Arquitectura Alta Gama   |
 
 `docker exec -it wir-redis redis-cli`
 
 ```redis
 DEL builds:trending:semana
+ZINCRBY builds:trending:semana 8 665f00000000000000000003
 ZINCRBY builds:trending:semana 5 665f00000000000000000001
-ZINCRBY builds:trending:semana 8 build-oficina-economica
-ZINCRBY builds:trending:semana 3 build-gamer-gama-alta
+ZINCRBY builds:trending:semana 3 665f00000000000000000009
 ```
 
 ## 2) Consulta para correr y capturar
@@ -41,23 +56,23 @@ ZREVRANK builds:trending:semana 665f00000000000000000001
 
 ```
 ZREVRANGE builds:trending:semana 0 9 WITHSCORES
-1) "build-oficina-economica"
+1) "665f00000000000000000003"   # Ryzen 1440p Popular
 2) "8"
-3) "665f00000000000000000001"
+3) "665f00000000000000000001"   # AM5 Gaming Equilibrada
 4) "5"
-5) "build-gamer-gama-alta"
+5) "665f00000000000000000009"   # Arquitectura Alta Gama
 6) "3"
 
-ZSCORE  -> "5"
+ZSCORE   -> "5"
 ZREVRANK -> (integer) 1     # posición 0-based: 2º en el ranking
 ```
 
 ## 4) Interpretación
 
-El sorted set ordena solo: `build-oficina-economica` (8) queda primera, la build de referencia
-`665f...001` (5) segunda y `build-gamer-gama-alta` (3) tercera. Registrar una visita es un único
-`ZINCRBY` y leer el top es un único `ZREVRANGE`, ambos en tiempo logarítmico, sin tocar Mongo.
-Cambiando el período (`builds:trending:mes`) se obtiene otro ranking con la misma estructura.
+El sorted set ordena solo: `...003` (8) queda primera, la build de referencia `...001` (5)
+segunda y `...009` (3) tercera. Registrar una visita es un único `ZINCRBY` y leer el top es un
+único `ZREVRANGE`, ambos en tiempo logarítmico, sin tocar Mongo. Cambiando el período
+(`builds:trending:mes`) se obtiene otro ranking con la misma estructura.
 
 > El mismo patrón aplica a los **componentes más usados** por categoría:
 > `componentes:trending:cpu`, `componentes:trending:gpu`, etc. (ver `redis-demo.txt`).

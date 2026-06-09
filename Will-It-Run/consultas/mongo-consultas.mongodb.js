@@ -1,142 +1,163 @@
-// Consultas MongoDB puras - Will It Run
-// Ejecutar desde la carpeta Will-It-Run:
+// Consultas MongoDB (solo lectura) con salida ETIQUETADA para capturar.
+// Will It Run? — modelo documental.
 //
-//   Get-Content consultas\mongo-consultas.mongodb.js | docker exec -i wir-mongo mongosh willitrun
+// Correr y capturar TODO de una (recomendado con --quiet para salida limpia):
+//   Get-Content consultas\mongo-consultas.mongodb.js | docker exec -i wir-mongo mongosh willitrun --quiet
 //
-// Este archivo es solo para READ y aggregations. No crea, modifica ni borra
-// datos. Para cargas usar consultas/mongo-carga.mongodb.js.
+// O usar el runner que guarda el output a archivo:
+//   ./consultas/run-demos.ps1
+//
+// Nota: la carga del dataset es `npm run seed:all` (este archivo NO carga datos).
+// Para demostrar INSERT/UPDATE/DELETE ver consultas/mongo-insert-demo.mongodb.js.
 
-// READ: traer todos los componentes.
-db.components.find();
+print("\n========== MongoDB · Will It Run? ==========");
 
-// READ: componentes por categoria.
-db.components.find({ cat: "cpu" });
-db.components.find({ cat: "gpu" });
-
-// READ: componentes por marca.
-db.components.find({ brand: "AMD" });
-db.components.find({ brand: "DemoBrand" });
-
-// READ: busqueda por texto.
-db.components.find({
-  name: { $regex: "ryzen", $options: "i" },
+print("\n=== 00 · Conteo de documentos por coleccion ===");
+printjson({
+  components: db.components.countDocuments(),
+  ensambles: db.ensambles.countDocuments(),
+  communitybuilds: db.communitybuilds.countDocuments(),
+  reviews: db.reviews.countDocuments(),
 });
 
-// READ: buscar un componente por id.
-db.components.findOne({ id: "demo-gpu-clase" });
-
-// READ: consultas sobre specs.
-db.components.find({
-  cat: "gpu",
-  "specs.scoreGPU": { $gte: 75 },
-});
-
-db.components.find({
-  cat: "power",
-  "specs.watts": { $gte: 700 },
-});
-
-db.components.find({
-  cat: "motherboard",
-  "specs.memType": "DDR5",
-});
-
-db.components.find({
-  cat: "memory",
-  "specs.type": "DDR5",
-  "specs.size": { $gte: 32 },
-});
-
-// READ: ordenar y limitar.
-db.components.find({ cat: "gpu" }).sort({ "specs.scoreGPU": -1 }).limit(5);
-
-// READ: mostrar solo algunos campos.
-db.components.find(
-  { cat: "cpu" },
-  { _id: 0, id: 1, name: 1, brand: 1, "specs.scoreCPU": 1 },
+// ---------- Patron 01: busqueda y filtrado de componentes ----------
+print("\n=== 01a · CPUs por scoreCPU (top 5) ===");
+printjson(
+  db.components
+    .find({ cat: "cpu" }, { _id: 0, id: 1, name: 1, "specs.scoreCPU": 1 })
+    .sort({ "specs.scoreCPU": -1 })
+    .limit(5)
+    .toArray(),
 );
 
-// BUILDS: consultas sobre ensambles.
-db.ensambles.find({ esPublica: true });
-db.ensambles.find({ perfilUso: "gaming" });
-db.ensambles.find({ "componentes.cpu": "ryzen-5-7600" });
-db.ensambles.find({ "componentes.gpu": "rtx-4070" });
-db.ensambles.find().sort({ buildScore: -1 });
+print("\n=== 01b · GPUs con scoreGPU >= 75 (top 5) ===");
+printjson(
+  db.components
+    .find(
+      { cat: "gpu", "specs.scoreGPU": { $gte: 75 } },
+      { _id: 0, id: 1, name: 1, "specs.scoreGPU": 1 },
+    )
+    .sort({ "specs.scoreGPU": -1 })
+    .limit(5)
+    .toArray(),
+);
 
-// REVIEWS: consultas sobre reviews.
-db.reviews.find({ targetType: "componente" });
-db.reviews.find({
-  targetType: "build",
-  targetId: "665f00000000000000000001",
-});
-db.reviews.find({ rating: { $gte: 4 } });
-db.reviews.find({ tipo: "reporte_problema" });
+print("\n=== 01c · Componentes marca AMD (cantidad + 3 ejemplos) ===");
+print("cantidad AMD: " + db.components.countDocuments({ brand: "AMD" }));
+printjson(
+  db.components
+    .find({ brand: "AMD" }, { _id: 0, id: 1, name: 1, cat: 1 })
+    .limit(3)
+    .toArray(),
+);
 
-// AGGREGATE: cantidad de componentes por categoria.
-db.components.aggregate([
-  {
-    $group: {
-      _id: "$cat",
-      cantidad: { $sum: 1 },
-    },
-  },
-  {
-    $sort: { cantidad: -1 },
-  },
-]);
+print("\n=== 01d · Busqueda por texto: 'ryzen' en el nombre ===");
+printjson(
+  db.components
+    .find({ name: { $regex: "ryzen", $options: "i" } }, { _id: 0, id: 1, name: 1 })
+    .limit(5)
+    .toArray(),
+);
 
-// AGGREGATE: promedio de score CPU.
-db.components.aggregate([
-  {
-    $match: { cat: "cpu" },
-  },
-  {
-    $group: {
-      _id: "$cat",
-      promedioScoreCPU: { $avg: "$specs.scoreCPU" },
-      cantidad: { $sum: 1 },
-    },
-  },
-]);
+print("\n=== 01e · Motherboards DDR5 (socket + memType) ===");
+printjson(
+  db.components
+    .find(
+      { cat: "motherboard", "specs.memType": "DDR5" },
+      { _id: 0, id: 1, name: 1, "specs.socket": 1, "specs.memType": 1 },
+    )
+    .limit(5)
+    .toArray(),
+);
 
-// AGGREGATE: promedio de score GPU.
-db.components.aggregate([
-  {
-    $match: { cat: "gpu" },
-  },
-  {
-    $group: {
-      _id: "$cat",
-      promedioScoreGPU: { $avg: "$specs.scoreGPU" },
-      cantidad: { $sum: 1 },
-    },
-  },
-]);
+// ---------- Patron 04 / 08: specs que alimentan score y cuello de botella ----------
+print("\n=== 04/08 · Specs de la build de referencia (cpu/gpu/ram) ===");
+printjson(
+  db.components
+    .find(
+      { id: { $in: ["ryzen-5-7600", "rtx-4070", "corsair-vengeance-32-ddr5"] } },
+      { _id: 0, id: 1, "specs.scoreCPU": 1, "specs.scoreGPU": 1, "specs.speed": 1 },
+    )
+    .toArray(),
+);
 
-// AGGREGATE: ranking simple por rendimiento.
-db.components.aggregate([
-  {
-    $match: {
-      cat: { $in: ["cpu", "gpu", "memory"] },
-    },
-  },
-  {
-    $project: {
-      _id: 0,
-      id: 1,
-      name: 1,
-      cat: 1,
-      scoreRendimiento: {
-        $ifNull: [
-          "$specs.scoreCPU",
-          {
-            $ifNull: ["$specs.scoreGPU", "$specs.speed"],
-          },
-        ],
+// ---------- Patron 06: builds preconfiguradas (coleccion ensambles) ----------
+print("\n=== 06a · Ensambles publicos por buildScore (top 5) ===");
+printjson(
+  db.ensambles
+    .find(
+      { esPublica: true },
+      { _id: 1, nombreBuild: 1, perfilUso: 1, gama: 1, buildScore: 1, tier: 1 },
+    )
+    .sort({ buildScore: -1 })
+    .limit(5)
+    .toArray(),
+);
+
+print("\n=== 06b · Ensambles de perfil gaming ===");
+printjson(
+  db.ensambles
+    .find(
+      { perfilUso: "gaming" },
+      { _id: 1, nombreBuild: 1, gama: 1, buildScore: 1, tier: 1 },
+    )
+    .sort({ buildScore: -1 })
+    .limit(5)
+    .toArray(),
+);
+
+// ---------- Patron 10: reseñas y reportes ----------
+print("\n=== 10a · Reseñas de la build de referencia (targetType=build) ===");
+printjson(
+  db.reviews
+    .find(
+      { targetType: "build", targetId: "665f00000000000000000001" },
+      { _id: 0, autor: 1, rating: 1, tipo: 1, comentario: 1 },
+    )
+    .limit(5)
+    .toArray(),
+);
+
+print("\n=== 10b · Reportes de problemas (tipo=reporte_problema) ===");
+printjson(
+  db.reviews
+    .find(
+      { tipo: "reporte_problema" },
+      { _id: 0, targetType: 1, targetId: 1, autor: 1, comentario: 1 },
+    )
+    .limit(5)
+    .toArray(),
+);
+
+// ---------- Agregaciones (diseño orientado a consultas) ----------
+print("\n=== AGG1 · Cantidad de componentes por categoria ===");
+printjson(
+  db.components
+    .aggregate([
+      { $group: { _id: "$cat", cantidad: { $sum: 1 } } },
+      { $sort: { cantidad: -1 } },
+    ])
+    .toArray(),
+);
+
+print("\n=== AGG2 · Promedio de scoreCPU y scoreGPU por categoria ===");
+printjson(
+  db.components
+    .aggregate([
+      {
+        $facet: {
+          cpu: [
+            { $match: { cat: "cpu" } },
+            { $group: { _id: "cpu", promedio: { $avg: "$specs.scoreCPU" }, n: { $sum: 1 } } },
+          ],
+          gpu: [
+            { $match: { cat: "gpu" } },
+            { $group: { _id: "gpu", promedio: { $avg: "$specs.scoreGPU" }, n: { $sum: 1 } } },
+          ],
+        },
       },
-    },
-  },
-  {
-    $sort: { scoreRendimiento: -1 },
-  },
-]);
+    ])
+    .toArray(),
+);
+
+print("\n=== Fin consultas MongoDB ===\n");

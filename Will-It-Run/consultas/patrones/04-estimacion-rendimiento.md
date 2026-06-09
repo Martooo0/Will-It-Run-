@@ -5,6 +5,16 @@
 de botella (CPU-bound vs GPU-bound) y su severidad. Entrada: componentes (cpu, gpu, memory) + gama
 + perfil. Salida: rendimiento estimado y el cuello de botella identificado.*
 
+## Diagrama de flujo en las bases de datos
+
+Estrategia *cache-aside* (Redis-first).
+
+```text
+Cliente --> Redis ---(miss)---> MongoDB ---(write-back, TTL 24h)---> Redis
+            buildscore:{id}     specs scoreCPU / scoreGPU / speed
+            (cache)             + regla de cuello de botella
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** los `specs.scoreCPU`, `specs.scoreGPU` y `specs.speed` de los

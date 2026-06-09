@@ -6,6 +6,15 @@ componentes clave, junto con su rating y cantidad de reviews. Entrada: la build 
 N (mínimo de componentes en común). Salida: builds similares ordenadas por componentes en común,
 con su rating y nº de reviews.*
 
+## Diagrama de flujo en las bases de datos
+
+```text
+Cliente --> Neo4j ----------------------> MongoDB
+            patron (b)-[:TIENE]->(c)<-     trae rating y cantidad
+            [:TIENE]-(otra) = solapamiento de reviews de esas
+            de componentes (ids por comun) community builds
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** los nodos `Build` y su relación `TIENE` hacia los componentes viven

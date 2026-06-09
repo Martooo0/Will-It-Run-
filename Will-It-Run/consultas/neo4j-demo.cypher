@@ -15,6 +15,9 @@
 // Para correr este archivo entero desde PowerShell:
 //   Get-Content consultas\neo4j-demo.cypher | docker exec -i wir-neo4j cypher-shell -u neo4j -p willitrun123
 
+RETURN '======== NEO4J · WILL IT RUN? ========' AS seccion;
+
+// === Conteos: nodos y relaciones ===
 // READ: contar nodos por label.
 MATCH (n)
 RETURN labels(n) AS labels, count(n) AS cantidad
@@ -34,6 +37,8 @@ MATCH (c:Componente)
 WHERE c.categoria = "gpu"
 RETURN c.id AS id, c.nombre AS nombre, c.categoria AS categoria;
 
+RETURN '=== Componentes compatibles (relaciones) ===' AS seccion;
+
 // RELACIONES: componentes compatibles con una motherboard.
 MATCH (:Componente {id: "b650-tomahawk"})-[:COMPATIBLE_CON]-(otro:Componente)
 RETURN otro.id AS id, otro.nombre AS nombre, otro.categoria AS categoria
@@ -46,6 +51,8 @@ RETURN cpu.nombre AS cpu, socket.nombre AS socket;
 // RELACIONES: socket de una motherboard.
 MATCH (mobo:Componente {id: "b650-tomahawk"})-[:TIENE_SOCKET]->(socket:Socket)
 RETURN mobo.nombre AS motherboard, socket.nombre AS socket;
+
+RETURN '=== Validacion de compatibilidad (socket / memoria / bus) ===' AS seccion;
 
 // VALIDACION: CPU y motherboard compatibles por socket.
 MATCH (cpu:Componente {id: "ryzen-5-7600"})-[:TIENE_SOCKET]->(socketCpu:Socket)
@@ -87,6 +94,8 @@ MATCH (:Componente {id: "ryzen-5-7600"})-[*1..2]-(otro:Componente)
 RETURN DISTINCT otro.id AS id, otro.nombre AS nombre, otro.categoria AS categoria
 ORDER BY categoria;
 
+RETURN '=== Builds: componentes y solapamiento ===' AS seccion;
+
 // BUILDS: componentes de una build.
 MATCH (b:Build {id: "665f00000000000000000001"})-[r:TIENE]->(c:Componente)
 RETURN b.id AS buildId, r.slot AS slot, c.id AS componenteId, c.nombre AS componente
@@ -102,6 +111,8 @@ WHERE c.id IN ["ryzen-5-7600", "rtx-4070", "b650-tomahawk"]
 RETURN b.id AS buildId, count(DISTINCT c) AS componentesEnComun
 ORDER BY componentesEnComun DESC;
 
+RETURN '=== Advertencias (APLICA_A) ===' AS seccion;
+
 // ADVERTENCIAS: advertencias asociadas a una GPU.
 MATCH (a:Advertencia)-[:APLICA_A]->(c:Componente {id: "rtx-4070"})
 RETURN a.id AS id, a.severidad AS severidad, a.title AS titulo, a.body AS detalle, c.nombre AS componente;
@@ -110,6 +121,8 @@ RETURN a.id AS id, a.severidad AS severidad, a.title AS titulo, a.body AS detall
 MATCH (a:Advertencia)-[:APLICA_A]->(c:Componente)
 WHERE c.id IN ["ryzen-5-7600", "rtx-4070", "b650-tomahawk"]
 RETURN a.id AS id, a.severidad AS severidad, a.title AS titulo, c.id AS componenteId;
+
+RETURN '=== Recomendaciones (COMBINA_FRECUENTEMENTE_CON) ===' AS seccion;
 
 // RECOMENDACIONES: componentes que combinan frecuentemente con una CPU.
 MATCH (:Componente {id: "ryzen-5-7600"})-[r:COMBINA_FRECUENTEMENTE_CON]-(rec:Componente)
@@ -135,6 +148,8 @@ RETURN
   avg(r.ratingPromedio) AS ratingPromedio
 ORDER BY frecuenciaTotal DESC, ratingPromedio DESC;
 
+RETURN '=== Agregaciones ===' AS seccion;
+
 // AGGREGATE: cantidad de componentes por categoria.
 MATCH (c:Componente)
 RETURN c.categoria AS categoria, count(c) AS cantidad
@@ -149,6 +164,8 @@ ORDER BY cantidad DESC;
 MATCH (b:Build)-[:TIENE]->(c:Componente)
 RETURN b.id AS buildId, count(c) AS cantidadComponentes
 ORDER BY cantidadComponentes DESC;
+
+RETURN '=== Demo CRUD: create / update / delete ===' AS seccion;
 
 // CREATE: crear componente demo.
 MERGE (demo:Componente {id: "demo-cpu-clase"})

@@ -1,16 +1,22 @@
-// Carga MongoDB pura - Will It Run
+// Demo de INSERT en MongoDB puro (datos de PRACTICA) - Will It Run
 // Ejecutar desde la carpeta Will-It-Run:
 //
-//   Get-Content consultas\mongo-carga.mongodb.js | docker exec -i wir-mongo mongosh willitrun
+//   Get-Content consultas\mongo-insert-demo.mongodb.js | docker exec -i wir-mongo mongosh willitrun
 //
-// Este archivo carga datos directamente en MongoDB, igual que si pegaran estos
-// comandos en la shell de MongoDB de Compass o en mongosh.
+// =========================================================================
+//  ESTO NO ES LA CARGA DEL DATASET.
+//  Solo inserta 4 componentes de practica (ids demo-*-clase) para mostrar la
+//  sintaxis INSERT de MongoDB en clase, sin pasar por TypeScript.
 //
-// Importante:
-// - Estos datos NO pasan por TypeScript.
-// - Se ven en MongoDB Compass despues de refrescar la coleccion.
-// - Si despues corren npm run seed:mongo, el seed borra la coleccion y vuelve a
-//   cargar lo que esta en data/*.json.
+//  La carga REAL del dataset (102 componentes, 40 builds, 25 community, 48
+//  reviews + el grafo) se hace SIEMPRE con un solo comando:
+//
+//      npm run seed:all        (lee data/*.json -> MongoDB y Neo4j)
+//
+//  Por eso, si corren `npm run seed:mongo` despues de este script, el seed
+//  vuelve a dejar la coleccion con el dataset real (sin los demo-*-clase).
+//  Eso es lo esperado: el dataset manda, estos inserts son solo demostracion.
+// =========================================================================
 
 // Para poder ejecutar este archivo varias veces sin chocar por ids duplicados,
 // primero limpiamos solo los documentos de practica.

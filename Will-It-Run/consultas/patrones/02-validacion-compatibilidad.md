@@ -5,6 +5,17 @@
 conjunto de reglas (socket, watts, estándares de memoria, capacidad térmica). Entrada: los ids de
 los componentes. Salida: estado de la build y la lista de issues con su severidad (error/warning).*
 
+## Diagrama de flujo en las bases de datos
+
+Estrategia *cache-aside* (Redis-first): primero se consulta el cache; si no esta, se
+recorre el grafo y el resultado se vuelve a guardar en Redis.
+
+```text
+Cliente --> Redis ---(miss)---> Neo4j ---(write-back, TTL 1h)---> Redis
+            compat:{cpu}:{mobo}  grafo: TIENE_SOCKET /
+            (cache)              SOPORTA_MEMORIA / TIENE_BUS
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** las reglas de compatibilidad viven en el **grafo Neo4j** (nodos

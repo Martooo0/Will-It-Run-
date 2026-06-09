@@ -5,6 +5,14 @@
 objetivo (gaming/diseño/arquitectura). Entrada: gama + perfil de uso. Salida: builds
 preconfiguradas con sus componentes y su score/tier.*
 
+## Diagrama de flujo en las bases de datos
+
+```text
+Cliente --> MongoDB
+            coleccion "ensambles" (presets gama x perfil)
+            filtro por gama + perfilUso, orden por buildScore
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** builds curadas en la colección `ensambles`, cargadas del seed

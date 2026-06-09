@@ -5,6 +5,14 @@
 Entrada: `targetId` de la build + `targetType = build`. Salida: listado de reseñas y reportes con
 su rating, comentario y fecha.*
 
+## Diagrama de flujo en las bases de datos
+
+```text
+Cliente --> MongoDB
+            coleccion "reviews"
+            filtro por targetId + targetType (build | componente)
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** colección `reviews`, cargada del seed `data/reviews.json`. Cada

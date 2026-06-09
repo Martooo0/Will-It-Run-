@@ -1,0 +1,2 @@
+# Esta carpeta guarda las transcripciones generadas por run-demos.ps1
+# (mongo.txt, neo4j.txt, redis.txt). Se regeneran corriendo el runner.

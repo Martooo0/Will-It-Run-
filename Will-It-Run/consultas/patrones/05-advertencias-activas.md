@@ -6,6 +6,16 @@ condicionales sobre los componentes (ej.: RAM DDR5 con motherboard DDR4, fuente 
 límite, cooler insuficiente). Entrada: los componentes con sus specs. Salida: listado de
 advertencias con severidad (info/warn/error), título y descripción.*
 
+## Diagrama de flujo en las bases de datos
+
+Integra los **tres** motores. *Cache-aside* (Redis-first); en el miss se combinan grafo + documental.
+
+```text
+Cliente --> Redis ---(miss)---> Neo4j  +  MongoDB ---(write-back, TTL 30m)---> Redis
+            advertencias:{hash}  APLICA_A   specs numericas
+            (cache)              (grafo)    (consumo / TDP / tipo RAM)
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** las advertencias estructurales viven como nodos `Advertencia` con

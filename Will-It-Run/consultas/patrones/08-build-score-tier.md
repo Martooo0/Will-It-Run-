@@ -5,6 +5,16 @@
 partir de los scores normalizados de CPU, GPU y velocidad de RAM, con bonus de balance. Entrada:
 los componentes de la build. Salida: el build score (0–100) y la tier (S/A/B/C/D).*
 
+## Diagrama de flujo en las bases de datos
+
+Estrategia *cache-aside* (Redis-first).
+
+```text
+Cliente --> Redis ---(miss)---> MongoDB ---(write-back, TTL 24h)---> Redis
+            buildscore:{id}     specs scoreCPU / scoreGPU / speed
+            (cache, hash)       -> totalScore 0-100 + tier S..D
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** los `specs.scoreCPU`, `specs.scoreGPU` y `specs.speed` de la

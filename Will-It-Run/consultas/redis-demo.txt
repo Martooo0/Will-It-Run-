@@ -1,12 +1,14 @@
 ECHO "=== Will It Run? - Demo de Redis (puro) ==="
 ECHO "Ejecutar interactivo:  docker exec -it wir-redis redis-cli   y pegar bloque por bloque"
 ECHO "Ejecutar de una:       Get-Content consultas/redis-demo.txt | docker exec -i wir-redis redis-cli"
+ECHO "Nota: 'npm run seed:redis' ya deja estas estructuras pobladas; este archivo tambien sirve como comandos para el Workbench de Redis Insight."
 
 ECHO "--- 1) Ranking de builds populares (sorted set) ---"
+ECHO "ids reales de data/builds.json: ...001 AM5 Gaming Equilibrada | ...003 Ryzen 1440p Popular | ...009 Arquitectura Alta Gama"
 DEL builds:trending:semana
 ZINCRBY builds:trending:semana 5 665f00000000000000000001
-ZINCRBY builds:trending:semana 8 build-oficina-economica
-ZINCRBY builds:trending:semana 3 build-gamer-gama-alta
+ZINCRBY builds:trending:semana 8 665f00000000000000000003
+ZINCRBY builds:trending:semana 3 665f00000000000000000009
 ZREVRANGE builds:trending:semana 0 9 WITHSCORES
 ZREVRANK builds:trending:semana 665f00000000000000000001
 
@@ -14,7 +16,7 @@ ECHO "--- 2) Ranking de componentes por categoria (sorted set) ---"
 DEL componentes:trending:cpu
 DEL componentes:trending:gpu
 ZINCRBY componentes:trending:cpu 12 ryzen-5-7600
-ZINCRBY componentes:trending:cpu 7 i5-14600k
+ZINCRBY componentes:trending:cpu 7 core-i5-14600k
 ZINCRBY componentes:trending:gpu 20 rtx-4070
 ZREVRANGE componentes:trending:cpu 0 9 WITHSCORES
 ZREVRANGE componentes:trending:gpu 0 9 WITHSCORES

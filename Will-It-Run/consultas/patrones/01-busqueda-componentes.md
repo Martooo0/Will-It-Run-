@@ -5,6 +5,14 @@
 especificaciones técnicas. Entrada: filtros sobre `cat`, `name`/`brand` y campos de `specs`.
 Salida: listado de componentes que cumplen los filtros, ordenados.*
 
+## Diagrama de flujo en las bases de datos
+
+```text
+Cliente --> MongoDB
+            coleccion "components"
+            filtros por cat / brand / specs.*
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** catálogo de hardware en la colección `components`, cargado por el
@@ -24,8 +32,9 @@ Salida: listado de componentes que cumplen los filtros, ordenados.*
 npm run seed:mongo
 ```
 
-> Alternativa "Mongo puro" (sin TypeScript):
-> `Get-Content consultas\mongo-carga.mongodb.js | docker exec -i wir-mongo mongosh willitrun`
+> Alternativa "Mongo puro" (sin TypeScript) para practicar INSERT:
+> `Get-Content consultas\mongo-insert-demo.mongodb.js | docker exec -i wir-mongo mongosh willitrun`
+> (OJO: inserta datos de practica `demo-*-clase`, NO es la carga del dataset.)
 
 ## 2) Consulta para correr y capturar
 

@@ -5,6 +5,15 @@
 otra categoría ordenados por algún criterio (rendimiento, popularidad). Entrada: id del componente
 + categoría objetivo. Salida: listado de compatibles con sus specs.*
 
+## Diagrama de flujo en las bases de datos
+
+```text
+Cliente --> Neo4j ----------------> MongoDB
+            COMPATIBLE_CON           hidrata specs de esos ids
+            (devuelve ids de la      y ordena por rendimiento
+             categoria objetivo)     o popularidad
+```
+
 ## Flujo de respuesta
 
 1. **De dónde nace el dato:** la relación `COMPATIBLE_CON` entre componentes vive en el grafo

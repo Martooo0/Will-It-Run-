@@ -39,8 +39,12 @@ estrategia *cache-aside* / *Redis-first* vista a nivel de datos.
 ```powershell
 cd Will-It-Run
 docker compose up -d     # levanta wir-mongo (27018), wir-neo4j (7474/7687), wir-redis (6379)
-npm run seed:all         # carga data/components.json en Mongo y data/graph.json en Neo4j
+npm run seed:all         # carga Mongo + Neo4j + Redis desde data/*.json
 ```
+
+> **Una sola forma de cargar el dataset:** `npm run seed:all` (lee `data/*.json`). Los archivos
+> `consultas/mongo-insert-demo.mongodb.js`, `mongo-demo.mongodb.js` y los bloques `CREATE` de
+> `neo4j-demo.cypher` son **demos de sintaxis** (CRUD), NO la carga real del dataset.
 
 ## Cómo abrir cada motor (para pegar las queries)
 
@@ -58,6 +62,36 @@ docker exec -it wir-redis redis-cli
 > También se puede usar **MongoDB Compass** (`mongodb://127.0.0.1:27018/willitrun?directConnection=true`)
 > y el **Neo4j Browser** (`http://localhost:7474`, usuario `neo4j`, pass `willitrun123`).
 
+## Ver y capturar desde las GUIs (Compass / Neo4j / Redis Insight)
+
+Para sacar screenshots desde las apps de escritorio —cómo conectar cada una a los contenedores y
+las **10 consultas adaptadas** a Compass / Neo4j Browser / Redis Insight— ver **[`../GUIS.md`](../GUIS.md)**.
+
+## Capturar las salidas por terminal (alternativa, Imagen Salida)
+
+En vez de copiar a mano, hay un runner que corre las 3 demos y guarda transcripciones limpias
+en `consultas/outputs/`:
+
+```powershell
+.\consultas\run-demos.ps1          # corre Mongo + Neo4j + Redis y captura los outputs
+.\consultas\run-demos.ps1 -Seed    # además recarga el dataset (npm run seed:all) antes
+```
+
+Genera `outputs/mongo.txt`, `outputs/neo4j.txt` y `outputs/redis.txt`: de ahí se saca el
+screenshot (o se pega el texto) de cada consulta.
+
+## El formato del profe (por consulta)
+
+Cada ficha mapea 1:1 con la plantilla pedida por la cátedra:
+
+| Plantilla del profe   | En la ficha                                                        |
+|-----------------------|-------------------------------------------------------------------|
+| **Consulta**          | título + *Patrón (Etapa 1, §6)*                                    |
+| **Imagen Entrada**    | screenshot del bloque de *2) Consulta para correr y capturar*      |
+| **Diagrama de flujo** | sección *Diagrama de flujo en las bases de datos*                  |
+| **Código por motor**  | los bloques `mongosh` / `cypher` / `redis` + *Interpretación*      |
+| **Imagen Salida**     | screenshot del output del runner (`outputs/*.txt`) o de *3) Resultado esperado* |
+
 ## Datos cargados actualmente
 
 El seed de **MongoDB** trae **102 componentes**, **40 builds** (`ensambles`), **25 community
@@ -70,3 +104,7 @@ partir de `components.json` + `builds.json`: **155 nodos y 1035 relaciones** que
 componentes, sus estándares (sockets, memoria, bus), las compatibilidades y las 40 builds. Queda
 **consistente con MongoDB**. Si cambia el dataset, regenerar el grafo y volver a correr
 `npm run seed:neo4j`.
+
+**Redis** se puebla con `npm run seed:redis` (incluido en `seed:all`): rankings
+(`builds:trending`, `componentes:trending`) y cachés de ejemplo (`buildscore`, `compat`,
+`advertencias`) derivados del mismo dataset. Se visualizan en Redis Insight (ver `../GUIS.md`).
