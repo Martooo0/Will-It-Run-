@@ -114,7 +114,7 @@
     "tipo": "review",
     "targetId": "core-ultra-7-265k",
     "targetType": "componente",
-    "autor": "Martin",
+    "autor": "Gustavo",
     "rating": 4,
     "comentario": "Buena opcion moderna para builds Intel con motherboard LGA1851."
   },
@@ -122,7 +122,7 @@
     "tipo": "review",
     "targetId": "rtx-4060",
     "targetType": "componente",
-    "autor": "Maximo",
+    "autor": "Alfredo",
     "rating": 4,
     "comentario": "GPU eficiente para 1080p y equipos con bajo consumo."
   },
@@ -130,7 +130,7 @@
     "tipo": "review",
     "targetId": "rtx-4070-super",
     "targetType": "componente",
-    "autor": "Lorenzo",
+    "autor": "Tiziano",
     "rating": 5,
     "comentario": "Muy buena placa para 1440p, con mejor margen que la RTX 4070 base."
   },
@@ -170,7 +170,7 @@
     "tipo": "review",
     "targetId": "rx-9070-xt",
     "targetType": "componente",
-    "autor": "Lorenzo",
+    "autor": "Martina",
     "rating": 5,
     "comentario": "GPU potente para una build moderna orientada a 1440p alto."
   },
@@ -178,7 +178,7 @@
     "tipo": "review",
     "targetId": "arc-b580",
     "targetType": "componente",
-    "autor": "Maximo",
+    "autor": "Juana",
     "rating": 4,
     "comentario": "Opcion interesante para gama media si se busca buena VRAM y precio competitivo."
   },
@@ -186,7 +186,7 @@
     "tipo": "review",
     "targetId": "gigabyte-b650-aorus-elite-ax",
     "targetType": "componente",
-    "autor": "Juan Pablo",
+    "autor": "Pablo",
     "rating": 5,
     "comentario": "Motherboard AM5 muy completa para gaming y expansion futura."
   },
@@ -194,7 +194,7 @@
     "tipo": "review",
     "targetId": "msi-b850-gaming-plus-wifi",
     "targetType": "componente",
-    "autor": "Martin",
+    "autor": "Delfina",
     "rating": 4,
     "comentario": "Buena base para Ryzen actuales con soporte moderno y conectividad WiFi."
   },
@@ -202,7 +202,7 @@
     "tipo": "review",
     "targetId": "asus-tuf-x870-plus-wifi",
     "targetType": "componente",
-    "autor": "Facundo",
+    "autor": "Pilar",
     "rating": 5,
     "comentario": "Placa robusta para una build AM5 de alta gama."
   },
@@ -210,7 +210,7 @@
     "tipo": "review",
     "targetId": "msi-mag-z790-tomahawk-wifi",
     "targetType": "componente",
-    "autor": "Alfredo",
+    "autor": "Axel",
     "rating": 5,
     "comentario": "Muy buena motherboard para procesadores Intel LGA1700 con DDR5."
   },
@@ -218,7 +218,7 @@
     "tipo": "review",
     "targetId": "msi-pro-z890-a-wifi",
     "targetType": "componente",
-    "autor": "Lorenzo",
+    "autor": "Santiago",
     "rating": 4,
     "comentario": "Correcta para builds Intel nuevas con Core Ultra y memoria DDR5 rapida."
   },
@@ -282,7 +282,7 @@
     "tipo": "review",
     "targetId": "corsair-rm850e",
     "targetType": "componente",
-    "autor": "Facundo",
+    "autor": "Mercedes",
     "rating": 5,
     "comentario": "Fuente recomendable para GPUs de gama media-alta con margen suficiente."
   },
@@ -290,7 +290,7 @@
     "tipo": "review",
     "targetId": "msi-mag-a850gl-pcie5",
     "targetType": "componente",
-    "autor": "Carlos",
+    "autor": "Lucila",
     "rating": 4,
     "comentario": "Buena fuente para builds modernas que requieren conectores actuales."
   },
@@ -306,7 +306,7 @@
     "tipo": "review",
     "targetId": "665f00000000000000000001",
     "targetType": "build",
-    "autor": "Hernan",
+    "autor": "Lucero",
     "rating": 5,
     "comentario": "La combinacion AM5 con RTX 4070 queda muy balanceada para gaming 1440p."
   },
@@ -337,42 +337,42 @@
     "tipo": "reporte_problema",
     "targetId": "core-i9-14900k",
     "targetType": "componente",
-    "autor": "Lorenzo",
+    "autor": "Patricio",
     "comentario": "Puede necesitar refrigeracion de alta capacidad en cargas sostenidas."
   },
   {
     "tipo": "reporte_problema",
     "targetId": "ryzen-9-9950x",
     "targetType": "componente",
-    "autor": "Martin",
+    "autor": "Enrique",
     "comentario": "Para productividad pesada conviene validar cooler y flujo de aire."
   },
   {
     "tipo": "reporte_problema",
     "targetId": "rtx-4080-super",
     "targetType": "componente",
-    "autor": "Tiziano",
+    "autor": "Camila",
     "comentario": "Verificar longitud de la GPU antes de usar gabinetes compactos."
   },
   {
     "tipo": "reporte_problema",
     "targetId": "corsair-vengeance-64-ddr5-6000",
     "targetType": "componente",
-    "autor": "Facundo",
+    "autor": "Agustina",
     "comentario": "En algunas motherboards puede requerir revisar frecuencia maxima soportada."
   },
   {
     "tipo": "reporte_problema",
     "targetId": "arctic-liquid-freezer-iii-360",
     "targetType": "componente",
-    "autor": "Maximo",
+    "autor": "Abel",
     "comentario": "Verificar compatibilidad fisica del radiador de 360mm con el gabinete."
   },
   {
     "tipo": "reporte_problema",
     "targetId": "665f00000000000000000001",
     "targetType": "build",
-    "autor": "Lucila",
+    "autor": "Amelia",
     "comentario": "La build es compatible, pero conviene monitorear margen de potencia si se cambia la GPU."
   }
 ]
